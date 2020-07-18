@@ -1,1 +1,0 @@
-/* code for fenwick tree will be added */

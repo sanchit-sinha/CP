@@ -24,3 +24,4 @@ class SparseTable {
     return func(mat[lg][from], mat[lg][to - (1 << lg) + 1]);
   }
 };
+

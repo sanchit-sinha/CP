@@ -7,3 +7,4 @@ Segment trees , lca , sparsetable
 KMP algorithm
 # SOME SOLVED PROBLEMS FROM FEW CONTESTS
  Codeforces,Codechef,Atcoder
+## CONTAINS SCRIPT WHICH WILL HWLP YOU DEBUG YOUR CODE

@@ -1,5 +1,5 @@
-<h1 align="center"> COMPETETIVE PROGRAMMING </h1><br />
-<h3 align="center"> Collection of important data structures and codes for competitive programming </h3> </br>
+<h1 align="center"> COMPETETIVE PROGRAMMING </h1>
+<h3 align="center"> Collection of important data structures and codes for competitive programming </h3> 
 
 ## <br> ![#c5f015](https://imgrp2.xiaolee.net/i/aHR0cHM6Ly9wbGFjZWhvbGQuaXQvMTUvYzVmMDE1LzAwMDAwMD90ZXh0PSs=.jpg) CONTAINS USEFUL DATA STRUCTURES  
    ![#1589F0](https://imgrp2.xiaolee.net/i/aHR0cHM6Ly9wbGFjZWhvbGQuaXQvMTUvMTU4OUYwLzAwMDAwMD90ZXh0PSs=.jpg) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Segment Tree**</br>
@@ -24,6 +24,3 @@
 
 
 ## <br> ![#c5f015](https://imgrp2.xiaolee.net/i/aHR0cHM6Ly9wbGFjZWhvbGQuaXQvMTUvYzVmMDE1LzAwMDAwMD90ZXh0PSs=.jpg) CONTAINS SCRIPT WHICH WILL HELP YOU DEBUG YOUR CODE  
-
-
- ![#1589F0](https://imgrp2.xiaolee.net/i/aHR0cHM6Ly9wbGFjZWhvbGQuaXQvMTUvMTU4OUYwLzAwMDAwMD90ZXh0PSs=.jpg) `#1589F0`

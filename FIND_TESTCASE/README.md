@@ -18,3 +18,5 @@
 - Clone the repository into your local system 
 - Code gen.cpp , correct.cpp , incorrect.cpp
 - Run the script(after giving it execute permission)
+
+  Check the input over which your program is failing in file named "input"

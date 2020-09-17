@@ -1,0 +1,37 @@
+#include "bits/stdc++.h"
+using namespace std; 
+
+#define IOS {ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);}
+#define ll long long 
+
+inline ll gcd(ll a,ll b) {if(b==0)return a;a%=b;return gcd(b,a);}
+inline ll max(ll a,ll b) {return((a>b)?a:b);}
+inline ll min(ll a,ll b) {return((a>b)?b:a);}
+ll powermod(ll x,ll ex,ll md){ll ans=1ll;while(ex>0){if(ex&1ll) ans=(ans*x)%md; ex>>=1ll;x=(x*x)%md;}return ans;}
+
+
+int main(){
+        IOS;
+        ll T;
+        cin>>T;
+        while(T--){
+                ll n,m;cin>>n;
+                ll p[n];
+                ll e1=0,o1=0,e2=0,o2=0;
+                for(ll i=0;i<n;i++){
+                        cin>>p[i];
+                        if(p[i]&1) o1++;
+                        else e1++;
+                }
+                cin>>m;
+                ll q[m];
+                for(ll i=0;i<m;i++){
+                        cin>>q[i];
+                        if(q[i]&1) o2++;
+                        else e2++;
+                }
+                ll ans=0;
+                ans += (e1*e2) + (o1*o2);
+                cout<<ans<<"\n";
+        }    
+}

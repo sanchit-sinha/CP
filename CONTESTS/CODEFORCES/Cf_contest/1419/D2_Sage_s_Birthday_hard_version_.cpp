@@ -9,16 +9,18 @@ inline ll gcd(ll a,ll b) {if(b==0)return a;a%=b;return gcd(b,a);}
 inline ll max(ll a,ll b) {return((a>b)?a:b);}
 inline ll min(ll a,ll b) {return((a>b)?b:a);}
 
-
+// check
+// 4
+// 2 3 3 4
 int main(){
         IOS;
         ll n;
         cin>>n;
         ll a[n];
         for(ll i=0;i<n;i++) cin>>a[i];
-        sort(a,a+n,greater<ll>());
+        sort(a,a+n);
         vector<ll>v(n,-1);
-        ll index=0;
+        ll index=1;
         ll done=-1;
         for(ll i=0;i<n;i++){
                 ll j=index;
@@ -29,11 +31,11 @@ int main(){
                 }
                 else break;
         }
-        index=1;
+        index=0;
         for(ll i=done+1;i<n;i++){
+                if(index>=n) break;
                 v[index]=a[i];
                 index+=2;
-                if(index>=n) break;
         }
         ll ans=0;
         for(ll i=1;i<n-1;i++){

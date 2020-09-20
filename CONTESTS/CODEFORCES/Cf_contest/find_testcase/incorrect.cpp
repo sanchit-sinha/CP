@@ -40,6 +40,4 @@ int main(){
                 if(v[i]<v[i-1] && v[i]<v[i+1]) ans++;
         }
         cout<<ans<<"\n";
-        for(ll i=0;i<n;i++) cout<<v[i] <<" ";
-        cout<<"\n";
 }

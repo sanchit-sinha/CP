@@ -15,5 +15,5 @@ for((i = 1; ; ++i)); do
     # ./brute < int > out2
     # diff -w out1 out2 || break
 
-    diff -w <(./incorrect < int) <(./correct < int) || break
+    diff -w <(./incorrect < input) <(./correct < input) || break
 done

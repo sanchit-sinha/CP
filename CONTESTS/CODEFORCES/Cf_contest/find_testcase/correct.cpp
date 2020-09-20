@@ -14,5 +14,32 @@ int main(){
         IOS;
         ll n;
         cin>>n;
-        cout<<n<<"\n";
+        ll a[n];
+        for(ll i=0;i<n;i++) cin>>a[i];
+        sort(a,a+n);
+        vector<ll>v(n,-1);
+        ll index=1;
+        ll done=-1;
+        for(ll i=0;i<n;i++){
+                ll j=index;
+                if(j<n){
+                        v[j]=a[i];
+                        index+=2;
+                        done=i;
+                }
+                else break;
+        }
+        index=0;
+        for(ll i=done+1;i<n;i++){
+                if(index>=n) break;
+                v[index]=a[i];
+                index+=2;
+        }
+        ll ans=0;
+        for(ll i=1;i<n-1;i++){
+                if(v[i]<v[i-1] && v[i]<v[i+1]) ans++;
+        }
+        cout<<ans<<"\n";
+        for(ll i=0;i<n;i++) cout<<v[i] <<" ";
+        cout<<"\n";
 }

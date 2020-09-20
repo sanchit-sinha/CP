@@ -16,5 +16,10 @@ int rand(int a, int b) {
 int main(int argc, char* argv[]) {
         srand(atoi(argv[1])); // atoi(s) converts an array of chars to int
         // gen input here
-        cout << rand(1,9)<<"\n";
+        ll n=rand(1,10);
+        cout<<n<<"\n";
+        for(ll i=0;i<n;i++){
+                ll x=rand(1,10);
+                cout<<x<<" ";
+        }
 }

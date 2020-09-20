@@ -16,10 +16,10 @@ int main(){
         cin>>n;
         ll a[n];
         for(ll i=0;i<n;i++) cin>>a[i];
-        sort(a,a+n);
+        sort(a,a+n,greater<ll>());
         vector<ll>v(n,-1);
         ll index=0;
-        ll done=0;
+        ll done=-1;
         for(ll i=0;i<n;i++){
                 ll j=index;
                 if(j<n){

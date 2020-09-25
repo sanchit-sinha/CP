@@ -46,7 +46,7 @@ int main(){
 
         ll active=0,ans=0;
         for(ll i=0;i<n+n;i++){
-                if(v[i].second==-1){
+                if(v[i].second==-1){s
                         ans+=nCr(fact,active,k-1);
                         ans%=mod;
 

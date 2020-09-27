@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/CodeChef - September Lunchtime 2020 Division 2/GCD operations/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "GCD operations",
+      "group": "CodeChef - September Lunchtime 2020 Division 2",
+      "url": "https://www.codechef.com/LTIME88B/problems/GCDOPS",
+      "memoryLimit": 256,
+      "timeLimit": 1000
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/AtCoder - ACL Beginner Contest/B - Integer Preference/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "B - Integer Preference",
+      "group": "AtCoder - ACL Beginner Contest",
+      "url": "https://atcoder.jp/contests/abl/tasks/abl_b",
+      "memoryLimit": 1024,
+      "timeLimit": 2000
+    }
+  }
+}

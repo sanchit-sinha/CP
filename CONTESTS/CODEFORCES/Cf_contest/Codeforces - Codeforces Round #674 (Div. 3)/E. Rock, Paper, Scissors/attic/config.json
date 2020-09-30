@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #674 (Div. 3)/E. Rock, Paper, Scissors/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "E. Rock, Paper, Scissors",
+      "group": "Codeforces - Codeforces Round #674 (Div. 3)",
+      "url": "https://codeforces.com/contest/1426/problem/E",
+      "memoryLimit": 256,
+      "timeLimit": 1000
+    }
+  }
+}

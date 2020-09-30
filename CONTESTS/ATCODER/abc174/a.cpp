@@ -5,7 +5,7 @@ using namespace std;
 #define ll long long 
 
 int main(){
-    IOS;
+    IOS;  
     ll n;
     cin>>n;
     if(n>=30) cout<<"Yes\n";

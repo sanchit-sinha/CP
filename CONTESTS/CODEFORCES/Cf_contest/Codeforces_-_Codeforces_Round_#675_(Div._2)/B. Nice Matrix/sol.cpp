@@ -1,6 +1,6 @@
 /**
  *    Author:  Sanchit Sinha
- *    Created: 05.10.2020 00:00:53       
+ *    Created: 05.10.2020 12:19:52       
 **/
 #include "bits/stdc++.h"
 using namespace std; 
@@ -19,22 +19,23 @@ int main(){
         while(T--){
                 ll n,m;
                 cin>>n>>m;
-                ll a[n][m];
-                for(ll i=0;i<n;i++)for(ll j=0;j<m;j++) cin>>a[i][j];
+                vector<vector<ll>> a(n , vector<ll>(m,0));
+                for(ll i=0;i<n;i++){
+                        for(ll j=0;j<m;j++) cin>>a[i][j];
+                }
                 ll ans=0;
-                ll b[n][m];
                 for(ll i=0;i<n;i++){
                         for(ll j=0;j<m;j++){
-                                ll u=a[i][j],v=a[n-1-i][j],w=a[i][m-j-1],x=a[n-1-i][m-j-1];
-                                ll arr[4] = {u,v,w,x};
+                                ll arr[4]={a[i][j],a[n-1-i][j],a[i][m-1-j],a[n-1-i][m-1-j]};
                                 sort(arr,arr+4);
-                                
                                 ll eq=arr[1];
-                                a[i][j]=a[n-1-i][j]=a[i][m-1-j]=a[n-1-i][m-1-j]=eq;
-                                ans += abs(u- eq)+abs(v-eq)+abs(w-eq)+abs(x-eq);
+                                ll val=abs(a[i][j]-eq)+abs(a[n-1-i][j]-eq)+abs(a[i][m-j-1]-eq)+abs(a[n-1-i][m-j-1]-eq); 
+                                a[i][j]=a[n-1-i][j]=a[i][m-j-1]=a[n-1-i][m-1-j]=eq;
+                                if(i==n/2 || j==m/2) val/=2;                               
+                                ans += val;
                         }
                 }
                 cout<<ans<<"\n";
-        }    
+        }       
         return 0;
 }

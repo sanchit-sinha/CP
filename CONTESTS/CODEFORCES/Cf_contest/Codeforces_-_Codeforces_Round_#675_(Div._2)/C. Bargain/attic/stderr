@@ -1,0 +1,4 @@
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #675 (Div. 2)/C. Bargain/sol.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #675 (Div. 2)/C. Bargain/sol.cpp:26:60:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[K)[m[K’ token
+   26 |                 ll second = (( (i+1) % mod) ) * ((n-i)%mod)[01;31m[K)[m[K ) %mod;
+      |                                                            [01;31m[K^[m[K

@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Testing Round #17 (Short, Unrated)/A. 123-sequence/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "A. 123-sequence",
+      "group": "Codeforces - Testing Round #17 (Short, Unrated)",
+      "url": "https://codeforces.com/contest/1429/problem/A",
+      "memoryLimit": 256,
+      "timeLimit": 1000
+    }
+  }
+}

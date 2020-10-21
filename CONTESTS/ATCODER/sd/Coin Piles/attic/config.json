@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/CSES - CSES Problem Set/Coin Piles/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "Coin Piles",
+      "group": "CSES - CSES Problem Set",
+      "url": "https://cses.fi/problemset/task/1754",
+      "memoryLimit": 512,
+      "timeLimit": 1000
+    }
+  }
+}

@@ -1,0 +1,19 @@
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #677 (Div. 3)/B. Yet Another Bookshelf/sol.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #677 (Div. 3)/B. Yet Another Bookshelf/sol.cpp:32:25:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kfor[m[K’
+   32 |                         [01;31m[Kfor[m[K(ll i=1;i<len;i++) ans+=(one[i]-one[i-1]-1);
+      |                         [01;31m[K^~~[m[K
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #677 (Div. 3)/B. Yet Another Bookshelf/sol.cpp:31:36:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kfor[m[K’
+   31 |                         for(ll i=0;
+      |                                    [01;31m[K^[m[K
+      |                                    [32m[K;[m[K
+   32 |                         [32m[Kfor[m[K(ll i=1;i<len;i++) ans+=(one[i]-one[i-1]-1);
+      |                         [32m[K~~~[m[K         
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #677 (Div. 3)/B. Yet Another Bookshelf/sol.cpp:32:25:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kfor[m[K’
+   32 |                         [01;31m[Kfor[m[K(ll i=1;i<len;i++) ans+=(one[i]-one[i-1]-1);
+      |                         [01;31m[K^~~[m[K
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #677 (Div. 3)/B. Yet Another Bookshelf/sol.cpp:31:36:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kfor[m[K’
+   31 |                         for[34m[K([m[Kll i=0;
+      |                            [34m[K~[m[K       [01;31m[K^[m[K
+      |                                    [32m[K)[m[K
+   32 |                         [32m[Kfor[m[K(ll i=1;i<len;i++) ans+=(one[i]-one[i-1]-1);
+      |                         [32m[K~~~[m[K         

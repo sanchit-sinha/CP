@@ -1,6 +1,6 @@
 /**
  *    Author:  Sanchit Sinha
- *    Created: 20.10.2020 22:08:30       
+ *    Created: 21.10.2020 09:19:40       
 **/
 #include "bits/stdc++.h"
 using namespace std; 
@@ -21,16 +21,23 @@ int main(){
                 cin>>n;
                 ll a[n];
                 for(ll i=0;i<n;i++) cin>>a[i];
-                set<pair<ll,ll>> s;
+                set<pair<ll,ll>>ans;
+                int x=-1;
                 for(ll i=0;i<n;i++){
-                        for(ll j=i+1;j<n;j++) if(a[i]!=a[j])s.insert({i,j});
+                        if(a[i]!=a[0]){
+                                ans.insert({0+1,i+1});
+                                x=i;
+                        }
                 }
-                ll len=(int)s.size();
-                if(len==n-1){
-                        cout<<"YES\n";
-                        for(auto it=s.begin();it!=s.end();it++) cout<<it->first+1<<" " <<it->second+1<<"\n";
+                if(x==-1){
+                        cout<<"NO\n";
+                        continue;
+                }       
+                for(ll i=1;i<n;i++){
+                        if(a[i]==a[0]) ans.insert({x+1,i+1});
                 }
-                else cout<<"NO\n";
-        }    
+                cout<<"YES\n";
+                for(auto &x:ans) cout<<x.first<<" " <<x.second<<"\n";
+        }       
         return 0;
 }

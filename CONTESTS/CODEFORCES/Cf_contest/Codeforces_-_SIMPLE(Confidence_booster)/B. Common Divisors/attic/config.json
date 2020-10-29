@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - SIMPLE(Confidence booster)/B. Common Divisors/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "B. Common Divisors",
+      "group": "Codeforces - SIMPLE(Confidence booster)",
+      "url": "https://codeforces.com/gym/301168/problem/B#",
+      "memoryLimit": 256,
+      "timeLimit": 2000
+    }
+  }
+}

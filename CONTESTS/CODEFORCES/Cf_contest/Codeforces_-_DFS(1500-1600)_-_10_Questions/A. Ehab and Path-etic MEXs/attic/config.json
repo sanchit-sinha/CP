@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - DFS(1500-1600) - 10 Questions/A. Ehab and Path-etic MEXs/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "A. Ehab and Path-etic MEXs",
+      "group": "Codeforces - DFS(1500-1600) - 10 Questions",
+      "url": "https://codeforces.com/gym/300933/problem/A",
+      "memoryLimit": 256,
+      "timeLimit": 1000
+    }
+  }
+}

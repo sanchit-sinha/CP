@@ -1,0 +1,4 @@
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - SIMPLE(Confidence booster)/C. Bear and Poker/sol.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - SIMPLE(Confidence booster)/C. Bear and Poker/sol.cpp:54:19:[m[K [01;31m[Kerror: [m[Klvalue required as left operand of assignment
+   54 |         while(x%3=[01;31m[K0[m[K)x/=3;
+      |                   [01;31m[K^[m[K

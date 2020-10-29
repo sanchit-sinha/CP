@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Educational Codeforces Round 97 (Rated for Div. 2)/A. Marketing Scheme/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "A. Marketing Scheme",
+      "group": "Codeforces - Educational Codeforces Round 97 (Rated for Div. 2)",
+      "url": "https://codeforces.com/contest/1437/problem/0",
+      "memoryLimit": 256,
+      "timeLimit": 1000
+    }
+  }
+}

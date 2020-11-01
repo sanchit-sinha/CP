@@ -1,0 +1,10 @@
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - DP/D. Timofey and a tree/sol.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - DP/D. Timofey and a tree/sol.cpp:77:12:[m[K [01;31m[Kerror: [m[Kunable to find string literal operator ‘[01m[Koperator""l[m[K’ with ‘[01m[Kconst char [5][m[K’, ‘[01m[Klong unsigned int[m[K’ arguments
+   77 |     cout <<[01;31m[K" df "l[m[K
+      |            [01;31m[K^~~~~~~[m[K
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - DP/D. Timofey and a tree/sol.cpp:78:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ was not declared in this scope
+   78 |     FOR([01;31m[Ki[m[K,1,n){
+      |         [01;31m[K^[m[K
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - DP/D. Timofey and a tree/sol.cpp:20:32:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[KFOR[m[K’
+   20 | #define FOR(i,a,b) for(int i=a;[01;36m[Ki[m[K<=b;i++)
+      |                                [01;36m[K^[m[K

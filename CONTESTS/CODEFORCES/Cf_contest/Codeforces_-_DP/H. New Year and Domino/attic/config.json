@@ -1,0 +1,21 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - DP/H. New Year and Domino/sol.cpp"
+  },
+  "bruteSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - DP/H. New Year and Domino/brute.cpp"
+  },
+  "generator": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - DP/H. New Year and Domino/gen.py"
+  },
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "H. New Year and Domino",
+      "group": "Codeforces - DP",
+      "url": "https://codeforces.com/gym/301084/problem/H",
+      "memoryLimit": 256,
+      "timeLimit": 3000
+    }
+  }
+}

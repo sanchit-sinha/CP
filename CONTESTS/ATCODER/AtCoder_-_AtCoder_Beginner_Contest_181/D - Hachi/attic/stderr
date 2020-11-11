@@ -1,0 +1,10 @@
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/AtCoder - AtCoder Beginner Contest 181/D - Hachi/sol.cpp:[m[K In function ‘[01m[Kbool check(long long int)[m[K’:
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/AtCoder - AtCoder Beginner Contest 181/D - Hachi/sol.cpp:54:14:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kauto it[m[K’
+   54 |         auto [01;31m[Kit[m[K=m.find(xx);
+      |              [01;31m[K^~[m[K
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/AtCoder - AtCoder Beginner Contest 181/D - Hachi/sol.cpp:51:10:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::_Rb_tree_iterator<std::pair<const long long int, long long int> > it[m[K’ previously declared here
+   51 |     trav([01;36m[Kit[m[K,v){
+      |          [01;36m[K^~[m[K
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/AtCoder - AtCoder Beginner Contest 181/D - Hachi/sol.cpp:18:28:[m[K [01;36m[Knote: [m[Kin definition of macro ‘[01m[Ktrav[m[K’
+   18 | #define trav(a,x) for(auto [01;36m[Ka[m[K=x.begin();a!=x.end();a++)
+      |                            [01;36m[K^[m[K

@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/AtCoder - AtCoder Beginner Contest 181/A - Heavy Rotation/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "A - Heavy Rotation",
+      "group": "AtCoder - AtCoder Beginner Contest 181",
+      "url": "https://atcoder.jp/contests/abc181/tasks/abc181_a",
+      "memoryLimit": 1024,
+      "timeLimit": 2000
+    }
+  }
+}

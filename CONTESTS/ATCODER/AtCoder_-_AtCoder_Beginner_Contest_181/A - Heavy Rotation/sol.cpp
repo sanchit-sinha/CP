@@ -1,6 +1,6 @@
 /**
  *    Author:  Sanchit Sinha
- *    Created: 04.11.2020 23:01:19       
+ *    Created: 12.11.2020 00:50:55       
 **/
 #include "bits/stdc++.h"
 using namespace std;
@@ -43,23 +43,14 @@ const ll N = 1e5 + 11;
 void solve(){
     ll n;
     cin>>n;
-    ll a[n];
-    rep(i,n)cin>>a[i];
-    ll pfxop=0;
-    FORR(i,n-2,0){
-        pfxop+=max(a[i]-a[i+1],0);
-        if(pfxop>a[i]){
-            cout<<"NO\n";
-            return;
-        }
-    }
-    cout<<"YES\n";
+    if(n&1) cout<<"Black\n";
+    else cout<<"White\n";
 }
 int main(){
     IOS;
     cout<<fixed<<setprecision(20);
     ll NTC=1;
-    cin>>NTC;
+    // cin>>NTC;
     ll PTC=0;
     while((PTC++)<NTC){
         // cout<<"Case #"<<PTC<<":"<<' ';

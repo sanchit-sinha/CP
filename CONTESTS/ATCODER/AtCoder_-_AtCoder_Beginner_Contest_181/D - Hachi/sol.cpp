@@ -1,6 +1,6 @@
 /**
  *    Author:  Sanchit Sinha
- *    Created: 04.11.2020 23:01:19       
+ *    Created: 12.11.2020 01:07:32       
 **/
 #include "bits/stdc++.h"
 using namespace std;
@@ -39,27 +39,64 @@ const ld PI = acos(-1);
 const ld eps = 1e-9;
 
 const ll N = 1e5 + 11;
-
+map<ll,ll> m;
+string s;
+ll n;
+bool check(ll x){
+    map<ll,ll> v;
+    while(x){
+        v[(x%10)]++;
+        x/=10;
+    }
+    trav(it,v){
+        ll xx=it->f;
+        ll cnt=it->s;
+        auto it1=m.find(xx);
+        if(it1 == m.end()) return false;
+        else{
+            if(cnt > m[xx]) return false;
+        }
+    }
+    return true;
+}
 void solve(){
-    ll n;
-    cin>>n;
-    ll a[n];
-    rep(i,n)cin>>a[i];
-    ll pfxop=0;
-    FORR(i,n-2,0){
-        pfxop+=max(a[i]-a[i+1],0);
-        if(pfxop>a[i]){
-            cout<<"NO\n";
+    cin>>s;
+    n=sz(s);
+    rep(i,n){
+        ll x=s[i]-'0';
+        m[x]++;
+    }
+    if(n<=2){
+        ll num=0;
+        rep(i,n) num=num*10 + s[i]-'0';
+        if(num%8==0){
+            cout<<"Yes\n";
+            return;
+        }
+        reverse(all(s));
+        num=0;
+        rep(i,n) num=num*10+s[i]-'0';
+        if(num%8==0){
+            cout<<"Yes\n";
+            return;
+        }
+        cout<<"No\n";
+        return;
+    }
+    FOR(i,13,200){
+        ll x=8*i;
+        if(check(x)){
+            cout<<"Yes\n";
             return;
         }
     }
-    cout<<"YES\n";
+    cout<<"No\n";
 }
 int main(){
     IOS;
     cout<<fixed<<setprecision(20);
     ll NTC=1;
-    cin>>NTC;
+    // cin>>NTC;
     ll PTC=0;
     while((PTC++)<NTC){
         // cout<<"Case #"<<PTC<<":"<<' ';

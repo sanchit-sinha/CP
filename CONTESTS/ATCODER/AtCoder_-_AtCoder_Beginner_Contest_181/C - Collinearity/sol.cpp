@@ -1,6 +1,6 @@
 /**
  *    Author:  Sanchit Sinha
- *    Created: 04.11.2020 23:01:19       
+ *    Created: 12.11.2020 00:55:57       
 **/
 #include "bits/stdc++.h"
 using namespace std;
@@ -39,27 +39,37 @@ const ld PI = acos(-1);
 const ld eps = 1e-9;
 
 const ll N = 1e5 + 11;
-
+bool found(pll p1,pll p2,pll p3){
+    if((p3.s - p1.s)*(p2.f - p1.f) == (p3.f - p1.f)*(p2.s - p1.s)) return true;
+    return false;
+}
 void solve(){
     ll n;
     cin>>n;
-    ll a[n];
-    rep(i,n)cin>>a[i];
-    ll pfxop=0;
-    FORR(i,n-2,0){
-        pfxop+=max(a[i]-a[i+1],0);
-        if(pfxop>a[i]){
-            cout<<"NO\n";
-            return;
+    pll p[n];
+    rep(i,n){
+        ll x,y;
+        cin>>x>>y;
+        p[i].f = x , p[i].s = y;
+    }
+    FOR(i,0,n-1){
+        FOR(j,i+1,n-1){
+            FOR(k,j+1,n-1){
+                if(found(p[i],p[j],p[k])){
+                    cout<<"Yes\n";
+                    return ;
+                }
+            }
         }
     }
-    cout<<"YES\n";
+    cout<<"No\n";
+    return ;
 }
 int main(){
     IOS;
     cout<<fixed<<setprecision(20);
     ll NTC=1;
-    cin>>NTC;
+    // cin>>NTC;
     ll PTC=0;
     while((PTC++)<NTC){
         // cout<<"Case #"<<PTC<<":"<<' ';

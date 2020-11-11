@@ -1,6 +1,6 @@
 /**
  *    Author:  Sanchit Sinha
- *    Created: 04.11.2020 23:01:19       
+ *    Created: 12.11.2020 00:52:04       
 **/
 #include "bits/stdc++.h"
 using namespace std;
@@ -8,7 +8,7 @@ using namespace std;
 #define pb push_back
 #define nl cout<<"\n"
 #define endl "\n"
-#define ll long long
+#define ll unsigned long long
 #define ld long double
 #define all(c) (c).begin(),(c).end()
 #define sz(c) (int)(c.size())
@@ -43,23 +43,20 @@ const ll N = 1e5 + 11;
 void solve(){
     ll n;
     cin>>n;
-    ll a[n];
-    rep(i,n)cin>>a[i];
-    ll pfxop=0;
-    FORR(i,n-2,0){
-        pfxop+=max(a[i]-a[i+1],0);
-        if(pfxop>a[i]){
-            cout<<"NO\n";
-            return;
-        }
+    ll sum=0;
+    while(n--){
+        ll a,b;
+        cin>>a>>b;
+        ll x = (b*(b+1))/2 - ((a-1)*a)/2;
+        sum+=x;
     }
-    cout<<"YES\n";
+    cout<<sum<<"\n";
 }
 int main(){
     IOS;
     cout<<fixed<<setprecision(20);
     ll NTC=1;
-    cin>>NTC;
+    // cin>>NTC;
     ll PTC=0;
     while((PTC++)<NTC){
         // cout<<"Case #"<<PTC<<":"<<' ';

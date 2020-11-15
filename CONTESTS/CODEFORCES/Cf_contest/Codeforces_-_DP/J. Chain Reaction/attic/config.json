@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - DP/J. Chain Reaction/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "J. Chain Reaction",
+      "group": "Codeforces - DP",
+      "url": "https://codeforces.com/gym/301084/problem/J",
+      "memoryLimit": 256,
+      "timeLimit": 2000
+    }
+  }
+}

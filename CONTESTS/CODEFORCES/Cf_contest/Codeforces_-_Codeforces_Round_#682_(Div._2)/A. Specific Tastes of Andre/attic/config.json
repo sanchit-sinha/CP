@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #682 (Div. 2)/A. Specific Tastes of Andre/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "A. Specific Tastes of Andre",
+      "group": "Codeforces - Codeforces Round #682 (Div. 2)",
+      "url": "https://codeforces.com/contest/1438/problem/0",
+      "memoryLimit": 256,
+      "timeLimit": 1000
+    }
+  }
+}

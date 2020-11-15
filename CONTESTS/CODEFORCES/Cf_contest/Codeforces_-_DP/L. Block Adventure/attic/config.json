@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - DP/L. Block Adventure/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "L. Block Adventure",
+      "group": "Codeforces - DP",
+      "url": "https://codeforces.com/gym/301084/problem/L",
+      "memoryLimit": 256,
+      "timeLimit": 1000
+    }
+  }
+}

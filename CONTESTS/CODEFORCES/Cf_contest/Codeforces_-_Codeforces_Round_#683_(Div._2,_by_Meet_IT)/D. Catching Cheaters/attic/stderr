@@ -1,0 +1,7 @@
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #683 (Div. 2, by Meet IT)/D. Catching Cheaters/sol.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #683 (Div. 2, by Meet IT)/D. Catching Cheaters/sol.cpp:63:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+   63 |         rep(j,m+1) ans=max(ans,dp[i][j])
+      |                                         [01;31m[K^[m[K
+      |                                         [32m[K;[m[K
+   64 |     [32m[K}[m[K
+      |     [32m[K~[m[K                                    

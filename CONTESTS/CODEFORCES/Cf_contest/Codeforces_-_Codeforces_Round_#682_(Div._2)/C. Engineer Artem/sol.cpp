@@ -1,6 +1,6 @@
 /**
  *    Author:  Sanchit Sinha
- *    Created: 13.11.2020 20:30:37       
+ *    Created: 16.11.2020 18:47:33       
 **/
 #include "bits/stdc++.h"
 using namespace std;
@@ -44,42 +44,34 @@ void solve(){
     ll n,m;
     cin>>n>>m;
     ll a[n][m];
-    ll b[n][m];
     rep(i,n){
-        rep(j,m){
-            b[i][j]=0;
-            cin>>a[i][j];
-        }
+        rep(j,m) cin>>a[i][j];
     }
-    FOR(j,1,m-1){
-        if(a[0][j] == a[0][j-1] + b[0][j-1]) b[0][j] = 1;
-    }
-    FOR(i,1,n-1){
-        rep(j,m){
-           if(a[i][j] == a[i-1][j] + b[i-1][j]){
-               if(b[i-1][j]==1) b[i][j]=1;
-               else{
-                   b[i-1][j]=1;
-                   FOR(k,j+1,m-1){
-                       if(a[i-1][k] == a[i-1][k-1] + b[i-1][k-1]) b[i-1][k]=1;
-                   }
-               }
-           }
-
-            if(a[i][j-1] + b[i][j-1] == a[i][j]){
-                if(a[i][j] + 1 != a[i-1][j]) b[i][j] = 1;
+    // turn = 1 , even : turn =0 odd
+    rep(i,n){
+        if(i&1){
+            rep(j,m){
+                if(j%2 == 0){
+                    if(a[i][j]%2 == 0) a[i][j]++;
+                }
                 else{
-                    b[i-1][j]=1;
-                    FOR(k,j+1,m-1){
-                        if(a[i-1][k] == a[i-1][k-1] + b[i-1][k-1]) b[i-1][k]=1;
-                    }
-                    b[i][j] = 1;
+                    if(a[i][j]%2) a[i][j]++;
+                }
+            }
+        }
+        else{
+            rep(j,m){
+                if(j%2 == 0){
+                    if(a[i][j]%2) a[i][j]++;
+                }
+                else{
+                    if(a[i][j]%2 == 0) a[i][j]++;
                 }
             }
         }
     }
     rep(i,n){
-        rep(j,m) cout<<a[i][j]+b[i][j]<<" ";
+        rep(j,m) cout<<a[i][j]<<" ";
         cout<<"\n";
     }
 }

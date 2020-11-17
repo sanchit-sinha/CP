@@ -1,6 +1,6 @@
 /**
  *    Author:  Sanchit Sinha
- *    Created: 15.11.2020 22:19:12       
+ *    Created: 16.11.2020 18:57:15       
 **/
 #include "bits/stdc++.h"
 using namespace std;
@@ -8,7 +8,7 @@ using namespace std;
 #define pb push_back
 #define nl cout<<"\n"
 #define endl "\n"
-#define ll int
+#define ll long long
 #define ld long double
 #define all(c) (c).begin(),(c).end()
 #define sz(c) (int)(c.size())
@@ -38,117 +38,32 @@ const ll mod = 1e9 + 7;
 const ld PI = acos(-1);
 const ld eps = 1e-9;
 
-const ll N = 1e5 + 11;
-string lcs(string &X, string &Y, int m, int n ) 
-{ 
-   int L[m+1][n+1]; 
-  
-   /* Following steps build L[m+1][n+1] in bottom up fashion. Note 
-      that L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1] */
-   for (int i=0; i<=m; i++) 
-   { 
-     for (int j=0; j<=n; j++) 
-     { 
-       if (i == 0 || j == 0) 
-         L[i][j] = 0; 
-       else if (X[i-1] == Y[j-1]) 
-         L[i][j] = L[i-1][j-1] + 1; 
-       else
-         L[i][j] = max(L[i-1][j], L[i][j-1]); 
-     } 
-   } 
-  
-   // Following code is used to print LCS 
-   int index = L[m][n]; 
-  
-   // Create a character array to store the lcs string 
-   char lcs[index+1]; 
-   lcs[index] = '\0'; // Set the terminating character 
-  
-   // Start from the right-most-bottom-most corner and 
-   // one by one store characters in lcs[] 
-   int i = m, j = n; 
-   while (i > 0 && j > 0) 
-   { 
-      // If current character in X[] and Y are same, then 
-      // current character is part of LCS 
-      if (X[i-1] == Y[j-1]) 
-      { 
-          lcs[index-1] = X[i-1]; // Put current character in result 
-          i--; j--; index--;     // reduce values of i, j and index 
-      } 
-  
-      // If not same, then find the larger of two and 
-      // go in the direction of larger value 
-      else if (L[i-1][j] > L[i][j-1]) 
-         i--; 
-      else
-         j--; 
-   } 
-  
-   // Print the lcs 
-   return lcs; 
-} 
-ll minWindow(string S, string T) {
-    //Given strings S and T, find the minimum (contiguous) substring W of S, so that T is a subsequence of W.
-    int s = S.size();
-    int t = T.size();
-    vector<vector<int>> dp(s, vector<int>(t, -1));
-    for(int i = 0; i < s; i++) {
-        if(S[i] == T[0]) {
-            dp[i][0] = i;
-        } else {
-            if(i != 0) {
-                dp[i][0] = dp[i-1][0];
-            }
-        }
-    }
-    for(int i = 1; i < s; i++) {
-        for(int j = 1; j < t; j++) {
-            if(S[i] == T[j]) {
-                dp[i][j] = dp[i-1][j-1];
-            } else {
-                dp[i][j] = dp[i-1][j];
-            }
-        }
-    }
-    int begin = -1, length = INT_MAX;
-    for(int i = 0; i < s; i++) {
-        int index = dp[i][t-1];
-        if(index != -1) {
-            int curLength = i - index + 1;
-            if(curLength < length) {
-                begin = index;
-                length = curLength;
-            }
-        }
-    }
-    if(begin == -1)
-        return -1;
-    string ans= S.substr(begin, length);
-    return (int)ans.size();
-}
+const ll N = 5e3 + 11;
+
+ll n,m;
+string s,t;
+ll dp[N][N];
+// dp[i][j] - contains final answer for the substring s[0..i] and t[0..j] 
 void solve(){
-    int n,m;
     cin>>n>>m;
-    string s,t;
     cin>>s>>t;
-    string LCS = lcs(s,t,n,m);
-    if(LCS=="") cout<<0<<"\n";
-    else{
-        ll len=sz(LCS);
-        string x;
-        ll ans=LLONG_MIN;
-        FOR(i,0,len-1){
-            x.pb(LCS[i]);
-            int l1 = minWindow(s,x);
-            int l2 = minWindow(t,x);
-            ll val = 4*abs((int)x.size()) - l1 - l2;
-            ans=max(ans,val);
+    FOR(i,1,n){
+        FOR(j,1,m){
+            if(s[i-1] == t[j-1]){
+                dp[i][j] = max(dp[i][j] , dp[i-1][j-1] +4-2);
+            }
+            else{
+                dp[i][j] = max(dp[i][j] , dp[i-1][j]-1);
+                dp[i][j] = max(dp[i][j] , dp[i][j-1]-1);
+            }
         }
-        cout<<ans<<"\n";
     }
-}
+    ll ans=0;
+    rep(i,n+1){
+        rep(j,m+1) ans=max(ans,dp[i][j]);
+    }
+    cout<<ans<<"\n";
+}   
 int main(){
     IOS;
     cout<<fixed<<setprecision(20);

@@ -1,6 +1,6 @@
 /**
  *    Author:  Sanchit Sinha
- *    Created: 15.11.2020 09:14:39       
+ *    Created: 16.11.2020 19:24:04       
 **/
 #include "bits/stdc++.h"
 using namespace std;
@@ -43,7 +43,7 @@ const ll N = 1e5 + 11;
 void solve(){
     ll n;
     cin>>n;
-    vll col,row;
+    vll row,col;
     rep(i,n){
         ll x,y;
         cin>>x>>y;
@@ -51,19 +51,13 @@ void solve(){
         col.pb(y);
     }
     sort(all(col));
-    ll mvto = col[(n-1)/2];
-    ll ans=0;
-    rep(i,n){
-        ans+=(abs(col[i]-mvto));
-    }
     sort(all(row));
-    ll firstmv = ans;
-    ans=LLONG_MAX;
-    for(ll i=row[0]-n+1;i<=row[n-1];i++){
-        ll dis=0;
-        rep(j,n) dis+=(abs(i+j-row[j]));
-        ans=min(ans,firstmv + dis);
-    }
+    ll x=col[(n-1)/2];
+    rep(i,n) row[i]=row[i]-i;
+    sort(all(row));
+    ll y=row[(n-1)/2];
+    ll ans=0;
+    rep(i,n) ans+=abs(col[i] - x) + abs(row[i] - y);
     cout<<ans<<"\n";
 }
 int main(){

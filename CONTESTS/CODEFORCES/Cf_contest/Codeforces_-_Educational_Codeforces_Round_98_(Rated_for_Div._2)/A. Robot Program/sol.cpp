@@ -1,5 +1,5 @@
 /**
- *    Created: 17.11.2020 16:12:46       
+ *    Created: 19.11.2020 20:06:53       
 **/
 #include "bits/stdc++.h"
 using namespace std;
@@ -40,27 +40,17 @@ const ld eps = 1e-9;
 const ll N = 1e5 + 11;
 
 void solve(){
-    ll n,m;
-    cin>>n>>m;
-    string s,t;
-    cin>>s>>t;
-    vector<vector<ll>> dp(n+1,vll(m+1,0));
-    // dp[i][j] - max value for substring s(0..i) amd substring t(0..j) including the final letters
-    ll ans=0;
-    FOR(i,1,n){
-        FOR(j,1,m){
-            if(s[i-1]==t[j-1]) dp[i][j]=max(dp[i][j] , dp[i-1][j-1]+2);
-            else dp[i][j]=max({dp[i][j] , dp[i-1][j]-1,dp[i][j-1]-1});
-            ans=max(ans,dp[i][j]);
-        }
-    }
-    cout<<ans<<"\n";
+    ll x,y;
+    cin>>x>>y;
+    ll mx=max(x,y);
+    if(x!=y) cout<<max(mx+mx-1,0)<<"\n";
+    else cout<<x+x<<"\n";
 }
 int main(){
     IOS;
     cout<<fixed<<setprecision(20);
     ll NTC=1;
-    // cin>>NTC;
+    cin>>NTC;
     ll PTC=0;
     while((PTC++)<NTC){
         // cout<<"Case #"<<PTC<<":"<<' ';

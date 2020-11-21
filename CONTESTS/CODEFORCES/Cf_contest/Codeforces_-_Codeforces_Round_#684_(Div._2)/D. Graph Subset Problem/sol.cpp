@@ -1,5 +1,5 @@
 /**
- *    Created: 17.11.2020 16:12:46       
+ *    Created: 17.11.2020 22:16:14       
 **/
 #include "bits/stdc++.h"
 using namespace std;
@@ -38,29 +38,70 @@ const ld PI = acos(-1);
 const ld eps = 1e-9;
 
 const ll N = 1e5 + 11;
-
-void solve(){
-    ll n,m;
-    cin>>n>>m;
-    string s,t;
-    cin>>s>>t;
-    vector<vector<ll>> dp(n+1,vll(m+1,0));
-    // dp[i][j] - max value for substring s(0..i) amd substring t(0..j) including the final letters
-    ll ans=0;
-    FOR(i,1,n){
-        FOR(j,1,m){
-            if(s[i-1]==t[j-1]) dp[i][j]=max(dp[i][j] , dp[i-1][j-1]+2);
-            else dp[i][j]=max({dp[i][j] , dp[i-1][j]-1,dp[i][j-1]-1});
-            ans=max(ans,dp[i][j]);
+vll v[N];
+ll n,m,k;
+bool vis[N];
+ll ct=0;
+vll vertx;
+void dfs(ll node){
+    vis[node]=1;
+    vertx.pb(node);
+    for(auto child : v[node]){
+        if(!vis[child]){
+            dfs(child);
         }
     }
-    cout<<ans<<"\n";
+}
+void solve(){
+    //clear
+    rep(i,n+1){
+        v[i].clear();
+        vis[i]=0;
+    }
+
+    cin>>n>>m>>k;
+    rep(i,m){
+        ll x,y;
+        cin>>x>>y;
+        v[x].pb(y);
+        v[y].pb(x);
+    }
+    FOR(i,1,n){
+        ll len=sz(v[i]);
+        if(len>=k){
+            cout<<"1 1\n"<<i<<"\n"; 
+            return;
+        }
+    }
+    FOR(i,1,n){
+        if(!vis[i]){
+            vertx.clear();
+            dfs(i);
+            bool ok=1;
+            rep(j,sz(vertx)){
+                ll node=vertx[j];
+                ll len=sz(v[node]);
+                if(len!=k-1){
+                    ok=0;
+                    break;
+                }
+            }
+            if(ok){
+                cout<<2<<"\n";
+                rep(j,sz(vertx)) cout<<vertx[i]<<" ";
+                cout<<"\n";
+                return;
+            }
+        }
+    }
+    
+    cout<<"-1\n";
 }
 int main(){
     IOS;
     cout<<fixed<<setprecision(20);
     ll NTC=1;
-    // cin>>NTC;
+    cin>>NTC;
     ll PTC=0;
     while((PTC++)<NTC){
         // cout<<"Case #"<<PTC<<":"<<' ';

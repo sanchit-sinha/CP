@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Educational Codeforces Round 98 (Rated for Div. 2)/A. Robot Program/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "A. Robot Program",
+      "group": "Codeforces - Educational Codeforces Round 98 (Rated for Div. 2)",
+      "url": "https://codeforces.com/contest/1452/problem/0",
+      "memoryLimit": 256,
+      "timeLimit": 2000
+    }
+  }
+}

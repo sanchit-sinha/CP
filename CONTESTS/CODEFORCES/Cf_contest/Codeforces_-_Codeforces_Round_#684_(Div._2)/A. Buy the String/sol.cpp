@@ -1,5 +1,5 @@
 /**
- *    Created: 17.11.2020 16:12:46       
+ *    Created: 17.11.2020 20:06:15       
 **/
 #include "bits/stdc++.h"
 using namespace std;
@@ -40,19 +40,23 @@ const ld eps = 1e-9;
 const ll N = 1e5 + 11;
 
 void solve(){
-    ll n,m;
-    cin>>n>>m;
-    string s,t;
-    cin>>s>>t;
-    vector<vector<ll>> dp(n+1,vll(m+1,0));
-    // dp[i][j] - max value for substring s(0..i) amd substring t(0..j) including the final letters
-    ll ans=0;
-    FOR(i,1,n){
-        FOR(j,1,m){
-            if(s[i-1]==t[j-1]) dp[i][j]=max(dp[i][j] , dp[i-1][j-1]+2);
-            else dp[i][j]=max({dp[i][j] , dp[i-1][j]-1,dp[i][j-1]-1});
-            ans=max(ans,dp[i][j]);
-        }
+    ll n,c0,c1,h;
+    cin>>n>>c0>>c1>>h;
+    string s;
+    cin>>s;
+    ll one=0,zero=0;
+    rep(i,n){
+        one+=(s[i]=='1');
+        zero+=(s[i]=='0');
+    }
+    ll ans=one*c1 + zero*c0;
+    if(h+c0<c1){
+        ans-=one*c1;
+        ans+=(h+c0)*one;
+    }
+    else if(h+c1<c0){
+        ans-=zero*c0;
+        ans+=(h+c1)*zero;
     }
     cout<<ans<<"\n";
 }
@@ -60,7 +64,7 @@ int main(){
     IOS;
     cout<<fixed<<setprecision(20);
     ll NTC=1;
-    // cin>>NTC;
+    cin>>NTC;
     ll PTC=0;
     while((PTC++)<NTC){
         // cout<<"Case #"<<PTC<<":"<<' ';

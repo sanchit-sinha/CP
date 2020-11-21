@@ -1,5 +1,5 @@
 /**
- *    Created: 17.11.2020 16:12:46       
+ *    Created: 19.11.2020 20:42:29       
 **/
 #include "bits/stdc++.h"
 using namespace std;
@@ -38,29 +38,62 @@ const ld PI = acos(-1);
 const ld eps = 1e-9;
 
 const ll N = 1e5 + 11;
-
-void solve(){
-    ll n,m;
-    cin>>n>>m;
-    string s,t;
-    cin>>s>>t;
-    vector<vector<ll>> dp(n+1,vll(m+1,0));
-    // dp[i][j] - max value for substring s(0..i) amd substring t(0..j) including the final letters
+ll n;
+ll a[N];
+ll calc(ll x){
     ll ans=0;
-    FOR(i,1,n){
-        FOR(j,1,m){
-            if(s[i-1]==t[j-1]) dp[i][j]=max(dp[i][j] , dp[i-1][j-1]+2);
-            else dp[i][j]=max({dp[i][j] , dp[i-1][j]-1,dp[i][j-1]-1});
-            ans=max(ans,dp[i][j]);
+    rep(i,n){
+        ans+=max(0,x-a[i]);
+    }
+    return ans;
+}
+void solve(){
+    //clear
+    rep(i,n) a[i]=0;
+
+    cin>>n;
+    rep(i,n) cin>>a[i];
+    sort(a,a+n);
+    ll mx1=a[n-1];
+    ll mx2=a[n-2];
+    ll ans=0;
+    ll val1 = calc(mx1);
+    ll val2 = calc(mx2);
+    // rep(i,n) cout<<a[i]<<" ";
+    // cout<<"\n";
+    // cout<<val1<<" " <<val2<<"\n";
+    rep(i,n){
+        if(i<n-1){
+            ll z=val1;
+            z-=mx1;
+            z+=a[i];
+            if(a[i]<=z) ans=max(ans,z-a[i]);
+            else{
+                ll y=a[i];
+                y-=z;
+                y%=(n-1);
+                if(y)ans=max(ans,(n-1-y));
+            }   
         }
+        else{
+            if(a[i]<=val2) ans=max(ans,val2-a[i]);
+            else{
+                ll y=a[i];
+                y-=val2;
+                y%=(n-1);
+                if(y) ans=max(ans,n-1-y);
+            }
+        }
+        // cout << i <<" : " << ans<<"\n";
     }
     cout<<ans<<"\n";
+    // cout<<"------------\n";
 }
 int main(){
     IOS;
     cout<<fixed<<setprecision(20);
     ll NTC=1;
-    // cin>>NTC;
+    cin>>NTC;
     ll PTC=0;
     while((PTC++)<NTC){
         // cout<<"Case #"<<PTC<<":"<<' ';

@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Educational Codeforces Round 98 (Rated for Div. 2)/D. Radio Towers/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "D. Radio Towers",
+      "group": "Codeforces - Educational Codeforces Round 98 (Rated for Div. 2)",
+      "url": "https://codeforces.com/contest/1452/problem/D",
+      "memoryLimit": 512,
+      "timeLimit": 2000
+    }
+  }
+}

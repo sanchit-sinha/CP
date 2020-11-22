@@ -1,6 +1,3 @@
-/**
- *    Created: 22.11.2020 00:26:15       
-**/
 #include "bits/stdc++.h"
 using namespace std;
 #define IOS {ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);}
@@ -40,42 +37,44 @@ const ld eps = 1e-9;
 const ll N = 1e5 + 11;
 
 void solve(){
-    ll n;
-    cin>>n;
-    ll a[n];
-    rep(i,n) cin>>a[i];
+    ll a,b,c,d;
+    cin>>a>>b>>c>>d;
+    c-=a;
+    d-=b;
 
-    ll l=0,r=1e18,mid=0,ans=0;
-    ll sum=accumulate(a,a+n,0);
-    while(l<=r){
-        mid=(l+(r-l)/2);
-        if(mid*(n-1)<sum) l=mid+1;
-        else{
-            bool ok=1;
-            rep(i,n) if(a[i]>mid) ok=0;
-            if(ok){
-                r=mid-1;
-                ans=mid;
-            }
-            else{
-                l=mid+1;
-            }
-        }
-    }
-    cout<<ans*(n-1)-sum<<"\n"; 
+    if(c==0 && d==0 ) cout<<"0\n";
+    else{
+    	if(a+b == c+d) cout<<"1\n";
+    	else if(a-b == c-d) cout<<"1\n";
+    	else if(abs(a-c) + abs(b-d) <= 3) cout<<"1\n";
+    	else{
+    		bool ok=0;
+    		if(c>=5){
+    			if(d>=0){
+    				if((c-d)>=5 && (c-d)%2==0) ok=1;
+    			}
+    			else{
+    				
+    			}
+    		}
+    		if(ok) cout<<3<<"\n";
+    		else cout<<2<<"\n";
+
+		}
+    }  
 }
 int main(){
     IOS;
     cout<<fixed<<setprecision(20);
     ll NTC=1;
-    cin>>NTC;
+    // cin>>NTC;
     ll PTC=0;
     while((PTC++)<NTC){
         // cout<<"Case #"<<PTC<<":"<<' ';
         solve();
         //cout<<"\n";
     }
-    cerr<<"Time : "<<1000*((double)clock())/(double)CLOCKS_PER_SEC<<"ms\n";
+    //cerr<<"Time : "<<1000*((double)clock())/(double)CLOCKS_PER_SEC<<"ms\n";
 }
 
 ll power(ll x,ll y){if(y==0) return 1;ll a=power(x,y/2);if(y%2==0) return a*a;else return x*a*a;}

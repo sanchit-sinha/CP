@@ -1,5 +1,5 @@
 /**
- *    Created: 22.11.2020 00:26:15       
+ *    Created: 21.11.2020 20:07:34       
 **/
 #include "bits/stdc++.h"
 using namespace std;
@@ -42,27 +42,13 @@ const ll N = 1e5 + 11;
 void solve(){
     ll n;
     cin>>n;
-    ll a[n];
-    rep(i,n) cin>>a[i];
-
-    ll l=0,r=1e18,mid=0,ans=0;
-    ll sum=accumulate(a,a+n,0);
-    while(l<=r){
-        mid=(l+(r-l)/2);
-        if(mid*(n-1)<sum) l=mid+1;
-        else{
-            bool ok=1;
-            rep(i,n) if(a[i]>mid) ok=0;
-            if(ok){
-                r=mid-1;
-                ans=mid;
-            }
-            else{
-                l=mid+1;
-            }
-        }
+    if(n==1) cout<<0<<"\n";
+    else if(n==2) cout<<1<<"\n";
+    else if(n==3) cout<<2<<"\n";
+    else{
+        if(n&1) cout<<3<<"\n";
+        else cout<<2<<"\n";
     }
-    cout<<ans*(n-1)-sum<<"\n"; 
 }
 int main(){
     IOS;

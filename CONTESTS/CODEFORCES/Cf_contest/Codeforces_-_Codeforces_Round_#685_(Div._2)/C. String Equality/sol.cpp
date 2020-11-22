@@ -1,6 +1,3 @@
-/**
- *    Created: 22.11.2020 00:26:15       
-**/
 #include "bits/stdc++.h"
 using namespace std;
 #define IOS {ios::sync_with_stdio(false);cin.tie(0);cout.tie(0);}
@@ -40,29 +37,30 @@ const ld eps = 1e-9;
 const ll N = 1e5 + 11;
 
 void solve(){
-    ll n;
-    cin>>n;
-    ll a[n];
-    rep(i,n) cin>>a[i];
+    ll n,m;
+    cin>>n>>m;
+    string s,t;
+    cin>>s>>t;
 
-    ll l=0,r=1e18,mid=0,ans=0;
-    ll sum=accumulate(a,a+n,0);
-    while(l<=r){
-        mid=(l+(r-l)/2);
-        if(mid*(n-1)<sum) l=mid+1;
-        else{
-            bool ok=1;
-            rep(i,n) if(a[i]>mid) ok=0;
-            if(ok){
-                r=mid-1;
-                ans=mid;
-            }
-            else{
-                l=mid+1;
-            }
-        }
+    ll cta[27]={0};
+    ll ctb[27]={0};
+    rep(i,n) cta[s[i]-'a']++;
+    rep(i,n) ctb[t[i]-'a']++;
+
+    rep(i,26){
+    	if(cta[i] < ctb[i]){
+    		cout<<"No\n";
+    		return;
+    	}	
+    	ll dif = cta[i]-ctb[i];
+    	if(dif%m){
+    		cout<<"No\n";
+    		return;
+    	}
+    	cta[i]-=dif;
+    	cta[i+1]+=dif;
     }
-    cout<<ans*(n-1)-sum<<"\n"; 
+    cout<<"Yes\n";
 }
 int main(){
     IOS;
@@ -75,7 +73,7 @@ int main(){
         solve();
         //cout<<"\n";
     }
-    cerr<<"Time : "<<1000*((double)clock())/(double)CLOCKS_PER_SEC<<"ms\n";
+    // cerr<<"Time : "<<1000*((double)clock())/(double)CLOCKS_PER_SEC<<"ms\n";
 }
 
 ll power(ll x,ll y){if(y==0) return 1;ll a=power(x,y/2);if(y%2==0) return a*a;else return x*a*a;}

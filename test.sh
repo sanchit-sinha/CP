@@ -15,18 +15,19 @@ do
 	echo "-----------------"
 	echo "Input:"
 	cat $file
+	echo ""
 	echo "Obtained output:"
 	./sol < $file > obtained$i
 	printf "${BLUE}"
 	cat  obtained$i
-	printf "${NC}"
+	printf "${NC}\n"
 
 	echo "Expected output:"
 	printf "${CYAN}"
 	cat o$i
-	printf "${NC}"
+	printf "${NC}\n"
 
-	DIFF=$(diff obtained$i o$i) 
+	DIFF=$(diff -EZbwB obtained$i o$i) 
 	if [ "$DIFF" != "" ] 
 	then
     	printf "${RED}SAMPLE FAILED${NC}\n"

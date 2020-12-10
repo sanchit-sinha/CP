@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+vector<ll> v[N];
+bool vis[N];
+void dfs(ll node){
+    vis[node]=1;
+    for(auto child : v[node]){
+        if(!vis[child]){
+            dfs(child);
+        }
+    }
+}]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>dfswithoutparent</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

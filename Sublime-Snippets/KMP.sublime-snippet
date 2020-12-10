@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+// 1 indexed .. p[i] is the length of the longest proper prefix of the substring s[0 … i - 1] which is also a suffix of this substring 
+vector<ll> KMP(string &s){
+    int n=(int)s.length();
+    vector<ll> p(n + 1);
+    p[0]=0;p[1]=0;
+    int j;
+    for(int i=2;i<=n;i++){
+       j=p[i-1];
+       while(j>0&&s[j]!=s[i-1]) j=p[j];
+       if(s[j]==s[i-1]) j++;
+       p[i]=j;
+    }
+    return p;
+}]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>KMP</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

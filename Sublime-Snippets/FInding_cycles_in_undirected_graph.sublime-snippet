@@ -1,0 +1,58 @@
+<snippet>
+	<content><![CDATA[
+vll v[N];
+ll cycle_start, cycle_end;
+ll colour[N], parent[N];
+vll cycle;
+bool dfs(ll node,ll par){
+	colour[node] = 1;
+	for(auto child :v[node]){
+		if(child == par) continue;
+		else{
+			if(colour[child] == 0){
+				parent[child] = node;
+				if(dfs(child, parent[child])) return true;
+			}
+			else if(colour[child] == 1){
+				cycle_end = node;
+				cycle_start = child;
+				return true;				
+			}
+		}
+	}
+	colour[node] = 2;
+	return false;
+}
+bool find_cycle(){
+	memset(parent, -1, sizeof(parent));
+	memset(colour, 0, sizeof(colour));
+	cycle_start = -1;
+	// n : number of vertices ( 1 - indexed)
+	for(ll i = 1; i <= n; i++){
+		if(colour[i] == 0){
+			if(dfs(i, parent[i])) break;
+		}
+	}
+
+	if(cycle_start == -1){
+		// not found any cycle
+		return false;
+	}
+	else{
+		// found cycle
+		cycle.pb(cycle_start);
+		for(ll i = cycle_end ; i != cycle_start ; i = parent[i]){
+			cycle.pb(i);
+		}
+		cycle.pb(cycle_start);
+		reverse(all(cycle));
+
+		return true;
+	}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>cycles_in_undirected graph</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

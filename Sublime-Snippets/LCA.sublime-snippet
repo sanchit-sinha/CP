@@ -1,0 +1,82 @@
+<snippet>
+	<content><![CDATA[
+class lca{
+    public:
+    ll MAX_D;
+    ll dfs_timer;
+    vector<vector<ll>> g;
+    vector<vector<ll>> ancestor;
+    vector<bool> visited;
+    vector<ll> depth;
+    vector<ll> en;
+    vector<ll> ex;
+    vector<ll> par;
+    lca(ll n){
+        g.resize(n + 1);
+        visited.resize(n + 1 , 0);
+        depth.resize(n + 1 , 0);
+        en.resize(n + 1, 0);
+        ex.resize(n + 1, 0);
+        par.resize(n + 1, -1);
+        dfs_timer = 0;
+        MAX_D = ceil(log2(n));
+        ancestor = vector<vector<ll>>(MAX_D + 1, vector<ll>(n + 1 , -1));
+    }
+    void addEdge(ll l, ll r){
+        g[l].push_back(r);
+    }
+    void do_dfs(ll sr){
+        visited[sr] = true;
+        dfs_timer++;
+        en[sr] = dfs_timer;
+        for(auto child : g[sr]){
+            if(!visited[child]){
+                ancestor[0][child] = sr;
+                depth[child] = depth[sr] + 1;
+                par[child] = sr; 
+                do_dfs(child);
+            }
+        }
+        dfs_timer++;
+        ex[sr] = dfs_timer;
+    }
+    void build_lca_table(){
+        ll n = (ll) g.size() - 1;
+        this->do_dfs(1);
+        for(ll d = 1; d <= MAX_D; d++){
+            for(ll i = 1; i <= n; i++){
+                if(ancestor[d - 1][i] != -1){
+                    ancestor[d][i] = ancestor[d - 1][ancestor[d - 1][i]];
+                }
+            }
+        }
+    }
+    ll climb(ll l , ll d){
+        ll i = l;
+        for(ll dd = 0; (dd <= MAX_D && i != -1) ;dd++){
+            if((1 << dd) & d) i = ancestor[dd][i];
+        }
+        return i;
+    }
+    ll get_lca(ll i , ll j){
+        if(depth[i] > depth[j]) i = climb(i , depth[i] - depth[j]);
+        if(depth[j] > depth[i]) j = climb(j , depth[j] - depth[i]);
+        assert(depth[j] == depth[i]);
+        if(i == j) return i;
+        for(ll d = MAX_D; d >= 0; --d){
+            if(ancestor[d][i] != ancestor[d][j]){
+                i = ancestor[d][i];
+                j = ancestor[d][j];
+            }
+        }
+        return ancestor[0][i];
+    }
+    ll isAncestor(ll u , ll v){
+        return (en[u] <= en[v] && ex[v] <= ex[u]);
+    }
+};]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>lca</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

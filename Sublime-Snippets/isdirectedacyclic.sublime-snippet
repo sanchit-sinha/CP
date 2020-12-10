@@ -1,0 +1,28 @@
+<snippet>
+	<content><![CDATA[
+vector<ll> v[N];
+bool vis[N];
+ll tym,dep[N];
+void dfs(ll node){
+    vis[node] = 1;
+    for(auto child : v[node]){
+        if(!vis[child]) dfs(child);
+    }
+    dep[node] = tym++;
+}
+bool isdag(){
+    for(ll i = 1 ; i <= n ; i++){
+        ll t1 = dep[i];
+        for(auto child:v[i]){
+            ll t2 = dep[child];
+            if(t2 > t1) return false;
+        }
+    }
+    return true;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>isDAG</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

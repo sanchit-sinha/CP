@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+ll dx[4] = {1 , -1 , 0 , 0};
+ll dy[4] = {0 , 0 , 1 , -1};
+bool vis[N][N];
+void dfs(ll i , ll j){
+    vis[i][j] = 1;
+    for(ll k=0;k<4;k++){
+        ll x = i - dx[k];
+        ll y = j - dy[k];
+        if(x >= 0 && y >= 0 && x < n && y < m && vis[x][y] == 0){
+            dfs(x , y);
+        }
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>grid-dfs</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

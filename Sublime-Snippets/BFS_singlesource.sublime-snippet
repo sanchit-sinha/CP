@@ -1,0 +1,24 @@
+<snippet>
+	<content><![CDATA[
+bool vis[N];
+void bfs(ll node){
+    deque<ll> d;
+    vis[node]=1;
+    d.push_back(node);
+    while(!d.empty()){
+        ll cur= *d.begin();
+        d.pop_front();
+        for(auto child:v[cur]){
+            if(!vis[child]){
+                vis[child]=1;
+                d.push_back(child);
+            }
+        }
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bfssinglesource</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

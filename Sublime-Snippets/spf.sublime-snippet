@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+// finding shortest prime factor//SPF -- Nlog(n)
+const ll mX = 
+ll spf[mX];
+void sieve (){
+    spf[1]=1;
+    for(ll i=2;i<mX;i++){
+        if(spf[i]==0){
+            spf[i]=i;
+            for (ll j=1ll*i*i;j<mX;j+=i){
+                if(spf[j]==0) spf[j]=i;
+            }
+        }
+    }
+}]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>spf</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

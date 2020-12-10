@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+// finding prime factors in sqrt logn
+vector<ll> prime;
+ll temp=x;
+for(ll i=2;i<=sqrt(x);i++){
+    if(temp%i==0){
+        while(temp%i==0) temp/=i;
+        prime.pb(i);
+
+    }
+}
+if(temp!=1) prime.pb(temp);
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>find_prime_factors</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

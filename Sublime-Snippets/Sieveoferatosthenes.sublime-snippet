@@ -1,0 +1,17 @@
+<snippet>
+	<content><![CDATA[
+bool prime[N]; 
+void sieve(ll n){ 
+    memset(prime,true,sizeof(prime)); 
+    for (ll p=2;p*p<=n;p++){ 
+        if (prime[p]==true) { 
+            for (ll i=p*p;i<=n;i += p) 
+                prime[i]=false; 
+        } 
+    } 
+}]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>sieve</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

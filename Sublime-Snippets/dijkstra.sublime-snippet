@@ -1,0 +1,34 @@
+<snippet>
+	<content><![CDATA[
+void dij(ll node){
+	set<pll> s;
+	FOR(i, 1, n){
+		if(i == node) continue;
+		else{
+			dis[i] = LLONG_MAX;
+			s.insert(mp(dis[i], i));
+		}
+	}
+	s.insert(mp(dis[node], node));
+
+	while(!s.empty()){
+		ll from = s.begin()->second;
+		s.erase(s.begin());
+		for(auto child : v[from]){
+			ll to = child.first;
+			ll len = child.second;
+
+			if(dis[from] + len < dis[to]){
+				s.erase(s.find(mp(dis[to], to)));
+				dis[to] = dis[from] + len;
+				s.insert(mp(dis[to], to));
+			}
+		}
+	}
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>dijkstra</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+// counts the number of integers between 1 and x inclusive, which are coprime to x 
+ll phi(ll x){
+    ll ans=x;
+    for(ll i=2;i*i<=x;i++){
+        if(x%i==0){
+            while(x%i==0) x/=i;
+            ans-=ans/i;
+        }
+    }
+    if(x>1) ans-=ans/x;
+    return ans;
+}]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>eulertotientfunction</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

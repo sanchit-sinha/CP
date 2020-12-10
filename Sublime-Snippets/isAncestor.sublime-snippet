@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+ll in[N] , out[N] , timer = 0;
+vector<ll> v[N];
+bool vis[N];
+void dfs(ll node){
+    vis[node]=1;
+    in[node]=timer++;
+    for(auto child:v[node]){
+        if(!vis[child]){
+            dfs(child);
+        }
+    }
+    out[node] = timer++;
+}
+// check if parent is the ancestor of child or not(1---parent---child)
+bool isancestor(ll parent, ll child){
+    if((in[parent] <= in[child]) && (out[parent] >= out[child])) return true;
+    else return false;
+}]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>isAncestor</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

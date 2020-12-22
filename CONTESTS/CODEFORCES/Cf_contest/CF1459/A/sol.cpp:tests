@@ -1,0 +1,9 @@
+[
+	{
+		"correct_answers":
+		[
+			"RED\nBLUE\nEQUAL"
+		],
+		"test": "3\n3\n777\n111\n3\n314\n159\n5\n09281\n09281\n"
+	}
+]

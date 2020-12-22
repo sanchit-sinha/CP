@@ -1,0 +1,9 @@
+[
+	{
+		"correct_answers":
+		[
+			"YES\nYES\nYES\nNO\nNO\nNO"
+		],
+		"test": "6\n8\n20192020\n8\n22019020\n4\n2020\n5\n20002\n6\n729040\n6\n200200\n"
+	}
+]

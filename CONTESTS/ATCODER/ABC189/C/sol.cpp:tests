@@ -1,0 +1,17 @@
+[
+	{
+		"correct_answers":
+		[
+			"in 0 5 12 \nin 1 5 20 \nin 2 5 16 \nin 3 3 9 \nin 4 5 8 \nin 5 5 9 \n20",
+			"20"
+		],
+		"test": "6\n2 4 4 9 4 9\n"
+	},
+	{
+		"correct_answers":
+		[
+			"200"
+		],
+		"test": "6\n200 4 4 9 4 9\n"
+	}
+]

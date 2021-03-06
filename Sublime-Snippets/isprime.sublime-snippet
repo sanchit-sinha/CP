@@ -1,6 +1,12 @@
 <snippet>
 	<content><![CDATA[
-Hello, ${1:this} is a ${2:snippet}.
+bool isprime(ll x){
+    for(ll i = 2 ; i*i <= x ; i++){
+        if(x%i == 0) return 0;
+    }
+
+    return 1;
+}
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>isprime</tabTrigger>

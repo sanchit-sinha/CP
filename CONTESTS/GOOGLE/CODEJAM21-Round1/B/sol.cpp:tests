@@ -1,0 +1,9 @@
+[
+	{
+		"correct_answers":
+		[
+			"Case #1: 25\nCase #2: 17\nCase #3: 0\nCase #4: 8"
+		],
+		"test": "4\n5\n2 2\n3 1\n5 2\n7 1\n11 1\n1\n17 2\n2\n2 2\n3 1\n1\n2 7\n"
+	}
+]

@@ -1,0 +1,23 @@
+<snippet>
+	<content>
+struct LinkedList{
+    ll data;
+    struct LinkedList *next;
+};
+
+typedef struct LinkedList *node;
+node createNode(ll val){
+    node newNode;
+    newNode = (node)calloc(1 , sizeof(struct LinkedList));
+    newNode -> data = val;
+    newNode -> next = NULL;
+    return newNode;
+}
+// node head = createNode(10);
+// node head = NULL;
+</content>
+	Optional: Set a tabTrigger to define how to trigger the snippet
+	<tabTrigger>linkedlist</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

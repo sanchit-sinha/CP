@@ -69,7 +69,6 @@ void solve(){
 		dp[i] = min(dp[i] , dp[i + 1]);
 	}
 
-	rep(i , n) cout << i + 1 << " : " << dp[i + 1] << "\n";
 	ll ans = 0;
 	FOR(i , 1 , n) ans += (dp[i] - i + 1);
 	cout << ans << "\n";

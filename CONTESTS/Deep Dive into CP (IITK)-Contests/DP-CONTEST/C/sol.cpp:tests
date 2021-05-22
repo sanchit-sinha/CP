@@ -1,0 +1,37 @@
+[
+	{
+		"correct_answers":
+		[
+			"4"
+		],
+		"test": "4 2\nBWWW\nWBBW\nWBBW\nWWWB\n"
+	},
+	{
+		"correct_answers":
+		[
+			"2"
+		],
+		"test": "3 1\nBWB\nWWB\nBWB\n"
+	},
+	{
+		"correct_answers":
+		[
+			"2"
+		],
+		"test": "5 3\nBWBBB\nBWBBB\nBBBBB\nBBBBB\nWBBBW\n"
+	},
+	{
+		"correct_answers":
+		[
+			"4"
+		],
+		"test": "2 2\nBW\nWB\n"
+	},
+	{
+		"correct_answers":
+		[
+			"4"
+		],
+		"test": "2 1\nWW\nWW\n"
+	}
+]

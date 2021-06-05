@@ -1,0 +1,91 @@
+<snippet>
+	<content><![CDATA[
+// insert from front, remove from front, query function for elements present
+template<typename T, class F = function<T(const T& , const T&)>>
+struct fstack{ // like min stack 
+    stack<T> stk , fstk;
+    F func;
+
+    fstack(const F &f): func(f) {};
+
+    fstack(){
+        fstack(nullptr);
+    }
+
+    void push(T add){
+        if(stk.empty()) fstk.push(add);
+        else fstk.push(func(fstk.top() , add));
+
+        stk.push(add);
+    }
+
+    void pop(){
+        assert(!stk.empty());
+        stk.pop();
+        fstk.pop();
+    }
+
+    T top(){
+        assert(!stk.empty());
+        return stk.top();
+    }
+
+    T query(){
+        assert(!fstk.empty());
+        return fstk.top();
+    }
+
+    bool empty(){
+        return stk.empty();
+    }
+};
+
+// insert from front, remove from back, query function for elements present
+template<typename T, class F = function<T(const T& , const T&)>>
+struct fqueue{ // like min queue 
+    fstack<T> stk[2];
+    F func;
+
+    fqueue(const F &f) : func(f){
+        stk[0] = fstack<T> (f);
+        stk[1] = fstack<T> (f);
+    }
+
+    fqueue(){
+        fqueue(nullptr);
+    }
+
+    void push(T add){
+        stk[0].push(add);
+    }
+
+    void pop(){
+        if(!stk[1].empty()) stk[1].pop();
+        else{
+            while(!stk[0].empty()){
+                stk[1].push(stk[0].top());
+                stk[0].pop();
+            }
+
+            stk[1].pop();
+        }
+    }
+
+    T query(){
+        if(stk[1].empty()) return stk[0].query();
+        else if(stk[0].empty()) return stk[1].query();
+        else return func(stk[0].query() , stk[1].query());
+    }
+
+    bool empty(){
+        return (stk[0].empty() && stk[1].empty());
+    }
+};
+// Usage :: fqueue<ll> gcdq([&](ll x , ll y){return gcd(x , y);});
+/* any function that can be used with seg trees can be used here : min , max , gcd , xor */
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>generic_queue</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

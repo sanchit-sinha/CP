@@ -1,22 +1,24 @@
 <snippet>
 	<content><![CDATA[
-ll fact[N],invfact[N];
+#define NCR
+const ll mX = ${1:N};
+ll fact[mX + 11] , invfact[mX + 11];
 void factorial(){
-    fact[0]=invfact[0]=1;
-    for(ll i=1;i<N;i++){
-        fact[i]=i*fact[i-1];
-        fact[i]%=mod;
+    fact[0] = invfact[0] = 1;
+    for(ll i = 1 ; i < mX ; i++){
+        fact[i] = i * fact[i - 1];
+        fact[i] %= mod;
     }
-    invfact[N-1]=powermod(fact[N-1],mod-2,mod);
-    for(ll i=N-2;i>0;i--){
-        invfact[i]=invfact[i+1]*(i+1);
-        invfact[i]%=mod;
+    invfact[mX - 1] = powermod(fact[mX - 1] , mod - 2 , mod); // if mod is prime
+    for(ll i = mX - 2 ; i > 0 ; i--){
+        invfact[i] = invfact[i + 1] * (i + 1);
+        invfact[i] %= mod;
     }
 }
-ll ncr(ll n,ll r){
+ll ncr(ll n , ll r){
     if(r > n || n < 0 || r < 0)return 0;
-    ll p=(fact[n]*invfact[r])%mod;
-    p*=invfact[n-r];
+    ll p = (fact[n] * invfact[r]) % mod;
+    p *= invfact[n - r];
     return p%mod;
 }
 ]]></content>

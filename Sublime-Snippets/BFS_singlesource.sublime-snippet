@@ -2,16 +2,16 @@
 	<content><![CDATA[
 bool vis[N];
 void bfs(ll node){
-    deque<ll> d;
-    vis[node]=1;
-    d.push_back(node);
-    while(!d.empty()){
-        ll cur= *d.begin();
-        d.pop_front();
-        for(auto child:v[cur]){
+    queue<ll> q;
+    vis[node] = 1;
+    q.push(node);
+    while(!q.empty()){
+        ll cur = q.front();
+        q.pop();
+        for(auto child : v[cur]){
             if(!vis[child]){
-                vis[child]=1;
-                d.push_back(child);
+                vis[child] = 1;
+                q.push(child);
             }
         }
     }

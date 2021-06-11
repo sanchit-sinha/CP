@@ -1,0 +1,32 @@
+<snippet>
+	<content><![CDATA[
+ll a[N][N], dp[N][N];
+// shortest path b/w pair of nodes in directed/undirected graph with any weights in O(n^3)
+void Floyd_Warshall(){
+    FOR(k , 1 , n){
+        FOR(i , 1 , n){
+            FOR(j , 1 , n){
+                if(dp[i][k] < inf && dp[k][j] < inf){
+                    dp[i][j] = min(dp[i][j] , dp[i][k] + dp[k][j]);
+                }
+            }
+        }
+    }
+
+    // finding pairs having negative cycle
+    FOR(k , 1 , n){
+        FOR(i , 1 , n){
+            FOR(j , 1 , n){
+                if(dp[k][j] < inf &&  dp[j][j] < 0 && dp[j][i] < inf){
+                    dp[i][j] = -inf;
+                }                
+            }
+        }
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>floyd_warshall</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

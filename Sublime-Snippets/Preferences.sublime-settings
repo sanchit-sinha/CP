@@ -1,0 +1,13 @@
+{
+	"atomic_save": true,
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
+	"detect_indentation": true,
+	"font_size": 8,
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"save_on_focus_lost": true,
+	"tab_size": 4,
+	"theme": "Adaptive.sublime-theme",
+}

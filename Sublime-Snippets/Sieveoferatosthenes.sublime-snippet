@@ -1,12 +1,13 @@
 <snippet>
 	<content><![CDATA[
-bool prime[N]; 
-void sieve(ll n){ 
+#define SIEVE
+const ll mX = ${1:N};
+bool prime[mX + 11]; 
+void sieve(){ 
     memset(prime,true,sizeof(prime)); 
-    for (ll p=2;p*p<=n;p++){ 
+    for (ll p = 2 ; p*p <= mX ; p++){ 
         if (prime[p]==true) { 
-            for (ll i=p*p;i<=n;i += p) 
-                prime[i]=false; 
+            for (ll i = p*p ; i <= mX; i += p) prime[i]=false; 
         } 
     } 
 }]]></content>

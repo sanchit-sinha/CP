@@ -1,19 +1,20 @@
 <snippet>
 	<content><![CDATA[
-// finding shortest prime factor//SPF -- Nlog(n)
-const ll mX = 
+#define SIEVE
+// finding shortest prime factor in O(nlog(n))
+const ll mX = ${1:N};
 ll spf[mX];
 void sieve (){
-    spf[1]=1;
-    for(ll i=2;i<mX;i++){
-        if(spf[i]==0){
-            spf[i]=i;
-            for (ll j=1ll*i*i;j<mX;j+=i){
-                if(spf[j]==0) spf[j]=i;
+    spf[1] = 1;
+    for(ll i = 2 ; i < mX ; i++){
+         if(spf[i] == 0){
+            spf[i] = i;
+            for (ll j = 1ll * i * i ; j < mX ; j += i){
+                if(spf[j] == 0) spf[j] = i;
             }
         }
     }
-}]]></content>
+} ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>spf</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->

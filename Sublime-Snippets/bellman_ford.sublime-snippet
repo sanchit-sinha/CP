@@ -1,0 +1,43 @@
+<snippet>
+	<content><![CDATA[
+ll dis[N] , parent[N];
+vll cycle;
+// finding (shortest path from a source + negative cycle reachable from source) in a directed graph ~O(nm)
+void bellman_ford(ll node){
+    FOR(i , 1 , n) dis[i] = inf;
+
+    dis[node] = 0;
+    ll cycle_node = -1;
+    FOR(i , 1 , n){
+        cycle_node = -1;
+        FOR(j , 1 , n){
+            ll from = j;
+            for(auto child : v[from]){
+                ll to = child.f;
+                ll len = child.s;
+
+                if(dis[from] < inf){
+                    if(dis[from] + len < dis[to]){
+                        dis[to] = max(-inf , dis[from] + len);
+                        parent[to] = from;
+                        cycle_node = to;
+                    }
+                }
+            }
+        }
+    }
+
+    if(cycle_node != -1){
+        rep(i , n) cycle_node = parent[cycle_node];
+        for(ll i = cycle_node ; ; i = parent[i]){
+            cycle.pb(i);
+            if(i == cycle_node && sz(cycle) > 1) break;
+        }
+        reverse(all(cycle));
+    }
+}]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bellman_ford</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

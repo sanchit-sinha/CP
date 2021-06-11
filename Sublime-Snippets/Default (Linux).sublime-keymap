@@ -1,0 +1,5 @@
+[
+	{ "keys": ["alt+q"], "command": "toggle_side_bar" },
+	{ "keys": ["ctrl+shift+u"], "command": "fast_olympic_coding_hook" },
+	{ "keys": ["f2"], "command": "focus_group", "args": { "group": 0 } },
+]

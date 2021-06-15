@@ -1,21 +1,40 @@
 <snippet>
 	<content><![CDATA[
-ll fenw[N]; // 1 indexed 
-void update(ll x , ll increment){
-    while(x <= N){
-        fenw[x] += increment; // update operation
-        x += (x&-x);
-    }
-}
-ll query(ll x){ // 1 ... x
-    ll val = 0; // operation (inf , -inf , 0 ...)
-    while(x > 0){
-        val += fenw[x]; // operation
-        x -= (x&-x);
+struct FenwickTree {
+    vector<long long> bit;  // binary 1-indexed tree
+    int n;
+
+    FenwickTree(int n) {
+        this->n = n;
+        bit.assign(n + 1, 0ll) ;
     }
 
-    return val;
-}]]></content>
+    FenwickTree(vector<long long> a) : FenwickTree(a.size()) { // a : 1 - indexed
+        for (size_t i = 1; i < a.size(); i++)
+            update(i, a[i]);
+    }
+
+    void update(int x , ll increment) {
+        while (x <= n) {
+            bit[x] += increment; // update operation
+            x += (x & -x);
+        }
+    }
+
+    ll query(int x) { // 1 .. x
+        ll val = 0ll; // operation (inf , -inf , 0 ...)
+        while (x > 0) {
+            val += bit[x]; // operation
+            x -= (x & -x);
+        }
+        return val;
+    }
+
+    ll query(int l, int r) { // l .. r
+        return query(r) - query(l - 1);
+    }
+};
+]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>fenwick tree</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->

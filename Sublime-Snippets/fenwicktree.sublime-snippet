@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[
+ll fenw[N]; // 1 indexed 
+void update(ll x , ll increment){
+    while(x <= N){
+        fenw[x] += increment; // update operation
+        x += (x&-x);
+    }
+}
+ll query(ll x){ // 1 ... x
+    ll val = 0; // operation (inf , -inf , 0 ...)
+    while(x > 0){
+        val += fenw[x]; // operation
+        x -= (x&-x);
+    }
+
+    return val;
+}]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>fenwick tree</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

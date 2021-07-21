@@ -255,30 +255,30 @@ TreeNode* mirrorTree(TreeNode* root) {
 }
 
 void solve() {
-	TreeNode* root = new TreeNode(0);
+	TreeNode* root = new TreeNode(7);
 
-	TreeNode* newnode1 = new TreeNode(1);
+	TreeNode* newnode1 = new TreeNode(6);
 	root -> left = newnode1;
 
-	TreeNode* newnode2 = new TreeNode(2);
+	TreeNode* newnode2 = new TreeNode(8);
 	root -> right = newnode2;
 
-	TreeNode* newnode3 = new TreeNode(5);
+	TreeNode* newnode3 = new TreeNode(4);
 	newnode1 -> left =  newnode3;
 
-	TreeNode* newnode4 = new TreeNode(6);
+	TreeNode* newnode4 = new TreeNode(3);
 	newnode3 -> left = newnode4;
 
-	TreeNode* newnode5 = new TreeNode(7);
+	TreeNode* newnode5 = new TreeNode(5);
 	newnode3 -> right = newnode5;
 	/*
-					0
+					7
 				   / \
-				  1   2
+				  6   8
 				 /
-				5
+				4
 			   / \
-			  6   7
+			  3   5
 							*/
 	cout << "Pre-order Traversal : "; preorderTraversal(root); cout << "\n";
 	cout << "Inorder Traversal : "; inorderTraversal(root); cout << "\n";

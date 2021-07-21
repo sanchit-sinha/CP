@@ -14,19 +14,21 @@ using namespace std;
 #define vvll                vector<vll>
 #define vpll                vector<pll>
 #define all(c)              (c).begin(),(c).end()
-#define sz(c)               (int)(c.size())
+#define sz(c)               (int)((c).size())
 #define get(x,c)            get<x>(c)
 #define trav(a,x)           for(auto a = x.begin() ; a != x.end() ; a++)
 #define rep(i, n)           for(int i = 0; i < (n) ; i++)
 #define FOR(i, a, b)        for(int i = (a); i <= (b); i++)
 #define FORR(i, b, a)       for(int i = (b); i >= (a); i--)
 
-string to_string(string s) {return '"' + s + '"';} string to_string(const char* s) {return to_string((string) s);} string to_string(bool b) {return (b ? "true" : "false");} template <typename A, typename B>string to_string(pair<A, B> p) {return "(" + to_string(p.first) + ", " + to_string(p.second) + ")";} template <typename A>string to_string(A v) {bool first = true; string res = "{"; for (const auto &x : v) {if (!first) {res += ", ";} first = false; res += to_string(x);} res += "}"; return res;} void debug_out() { cerr << "\n"; } template <typename Head, typename... Tail>void debug_out(Head H, Tail... T) {cerr << " " << to_string(H) << "\n"; debug_out(T...);}
 #ifdef LOCAL
-#define debug(...) cerr << "[" << #__VA_ARGS__ << "]:", debug_out(__VA_ARGS__)
+#include "debug.cpp"
+#define debug(...) cerr << "[" << #__VA_ARGS__ << "]: ", debug_out(__VA_ARGS__)
 #else
 #define debug(...) 42
+#define cerr if(false) cerr
 #endif
+
 
 inline ll gcd(ll a, ll b) {if (b == 0) return a; a %= b; return gcd(b , a);}
 inline ll max(ll a, ll b) {return ((a > b) ? a : b);}
@@ -39,53 +41,84 @@ const ll mod = 1e9 + 7;
 const ld PI = acos(-1);
 const ld eps = 1e-9;
 
-struct node {
-    ll data;
-    node* next;
+class classA {
+public:
+    void print() {
+        cout << "You are in base function\n";
+    }
 };
 
-void append(node* &last , ll data) {
-    node* new_node = new node;
-    new_node -> data = data;
-
-    if (last == NULL) {
-        new_node -> next = new_node;
-        last = new_node;
-        return;
+class classB: public classA {
+public:
+    void print() {
+        cout << "You are in the derived class\n";
     }
+};
 
-    new_node -> next = last -> next;
-    last -> next = new_node;
-    last = new_node;
-
-    return ;
-}
-void display(node* last) {
-    if (last == NULL) return;
-
-    node* starting_node = last -> next;
-    while (starting_node  != last) {
-        cout << starting_node -> data << " ";
-        starting_node = starting_node -> next;
+class virtualclassA {
+public:
+    virtual void print() {
+        cout << "You are in virtual base function\n";
     }
+};
 
-    cout << last -> data << " " << "\n\n";
-    return;
-}
+class virtualclassB: public virtualclassA {
+public:
+    void print() override {
+        cout << "You are in the virtual derived class\n";
+    }
+};
 
 void solve() {
-    node* last = NULL;
-    append(last , 1);
-    append(last , 3);
-    append(last , 5);
-    append(last , 7);
-    append(last , 9);
-    append(last , 18);
+    classA var1;
+    var1.print();
+    // You are in base function
 
-    display(last);
+
+    classB var2;
+    var2.print();
+    // You are in the derived class
+
+
+    // using base pointer with derived class object
+    classA* var3 = new classB();
+    var3->print();
+    // You are in base function
+
+    // using scope resolution
+    classB var4;
+    var4.classA::print();
+    // You are in base function
+
+
+    // virtual functions
+    virtualclassA var5;
+    var5.print();
+    // You are in virtual base function
+
+
+    virtualclassB var6;
+    var6.print();
+    // You are in the virtual derived class
+
+
+    // using base pointer with derived class object
+    virtualclassA* var7 = new virtualclassB();
+    var7->print();
+    // You are in the virtual derived class
+
+
+    // using scope resolution
+    virtualclassB var8;
+    var8.virtualclassA::print();
+    // You are in virtual base function
+
 }
 
 int main() {
+#ifdef LOCAL
+    freopen("../error.txt", "w", stderr);
+#endif
     ios_base::sync_with_stdio(false);
     cin.tie(0); cout.tie(0);
     cout << fixed << setprecision(20);
@@ -93,21 +126,22 @@ int main() {
     ll NTC = 1;
     // cin >> NTC;
 
+#ifdef PREPROCESS
+    preprocess();
+#endif
 #ifdef SIEVE
     sieve();
 #endif
 #ifdef NCR
     factorial();
 #endif
-#ifdef PREPROCESS
-    preprocess();
-#endif
 
     ll PTC = 0;
     while ((PTC++) < NTC) {
+        cerr << "Testcase # " << PTC << "\n";
         // cout << "Case #" << PTC << ":" << ' ';
         solve();
-        // cout << "\n";
+        cerr << "*************************\n";
     }
     // cerr << "Time : " << 1000 * ((double)clock()) / (double)CLOCKS_PER_SEC << "ms\n";
 }

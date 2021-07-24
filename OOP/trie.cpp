@@ -31,6 +31,7 @@ const ll inf = 1e18 + 9;
 const ll mod = 1e9 + 7;
 const ld PI = acos(-1);
 const ld eps = 1e-9;
+
 const int MX = 26;
 // Insert and search costs O(key_length)
 // memory requirements of Trie is O(MX * key_length * N)
@@ -65,6 +66,24 @@ bool search(TrieNode* root, string &key) {
 	if (temp->endofWord == false) return 0;
 	return 1;
 }
+bool isempty(TrieNode* root) {
+	for (int i = 0; i < MX; i++) if (root->children[i]) return 0;
+	return 1;
+}
+TrieNode* erase(TrieNode* root, string &key, int depth = 0) {
+	if (!root) return NULL;
+	if (depth == key.size()) {
+		if (root->endofWord) root->endofWord = false;
+		if (isempty(root))delete root, root = NULL;
+		return root;
+	}
+
+	int index = key[depth] - 'a';
+	root->children[index] = erase(root->children[index], key, depth + 1);
+	if (isempty(root) && root->endofWord == false) delete root, root = NULL;
+	return root;
+}
+
 void solve() {
 	vector<string> keys = {"the", "a", "there", "answer", "any", "by", "bye", "their"};
 	int n = keys.size();

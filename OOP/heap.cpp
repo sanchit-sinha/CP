@@ -6,7 +6,22 @@ const int N = 1e5 + 11; // Max Size of heap
 
 ll tree[N], len = 1; // tree : heap
 ll A[N], n;
+void levelorder(int node) {
+	queue<pair<ll, ll>> q;
+	q.push({node, tree[node]});
 
+	while (!q.empty()) {
+		auto p = q.front();
+		ll cur = p.first;
+		cout << p.second << " ";
+		q.pop();
+
+		ll left = 2 * cur, right = 2 * cur + 1;
+		if (left < len) q.push({left, tree[left]});
+		if (right < len) q.push({right, tree[right]});
+	}
+	return;
+}
 // 0 - indexed : (>= max heap)
 bool func(ll rootValue, ll childValue) {
 	return rootValue >= childValue;
@@ -34,7 +49,7 @@ void insert(ll val) {
 
 	while (node) {
 		int parent = node / 2;
-		if (func(tree[node], tree[parent])) { // bigger node is pushed upward
+		if (parent && func(tree[node], tree[parent])) { // bigger node is pushed upward
 			swap(tree[node], tree[parent]);
 			node = parent;
 		}
@@ -50,7 +65,7 @@ void deleteNode(int node) {
 
 	while (node) {
 		int parent = node / 2;
-		if (func(tree[node], tree[parent])) { // bigger node is pushed upward
+		if (parent && func(tree[node], tree[parent])) { // bigger node is pushed upward
 			swap(tree[node], tree[parent]);
 			node = parent;
 		}
@@ -69,22 +84,17 @@ void buildHeap() {
 	}
 }
 
-void levelorder(int node) {
-	queue<pair<ll, ll>> q;
-	q.push({node, tree[node]});
 
-	while (!q.empty()) {
-		auto p = q.front();
-		ll cur = p.first;
-		cout << p.second << " ";
-		q.pop();
+void HeapSort(int node = 1) {
+	while (len > 1) {
+		int root = 1;
+		swap(tree[root], tree[len - 1]);
+		len--;
 
-		ll left = 2 * cur, right = 2 * cur + 1;
-		if (left < len) q.push({left, tree[left]});
-		if (right < len) q.push({right, tree[right]});
+		Heapify(root);
 	}
-	return;
 }
+
 
 ll peek() {
 	if (len <= 1) return -1;
@@ -175,7 +185,7 @@ int main() {
 
 	*/
 
-	int iters = 1000000;
+	int iters = 20;
 	while (iters--) {
 		int x = range(0, 1);
 		int n = range(1, 50);
@@ -184,16 +194,22 @@ int main() {
 		else extract();
 
 		if (validateHeap()) {
-			cout << "correct\n";
 			// cout << x << " " << n << " : " << len << "levelorder: ";
 			// levelorder(1);
 			// cout << "\n\n";
 		}
 		else {
-			cout << "levelorder: ";
+			cout << "false\nlevelorder: ";
 			levelorder(1);
 			exit(1);
 		}
 		assert(validateHeap());
 	}
+
+	cout << " levelorder: " ; levelorder(1); cout << "\n";
+	int sz = len;
+	HeapSort();
+	cout << sz - 1 << "\n";
+	for (int i = 1; i < sz; i++) cout << tree[i] << " ";
+	cout << "\n";
 }

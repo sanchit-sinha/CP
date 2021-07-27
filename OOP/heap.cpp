@@ -2,23 +2,23 @@
 using namespace std;
 
 #define ll long long
-const int N = 1e5 + 11;
+const int N = 1e5 + 11; // Max Size of heap
 
-ll tree[N], len;
+ll tree[N], len = 1; // tree : heap
 ll A[N], n;
 
-// 0 - indexed
-bool f(ll rootValue, ll childValue) {
-	return rootValue > childValue;
+// 0 - indexed : (>= max heap)
+bool func(ll rootValue, ll childValue) {
+	return rootValue >= childValue;
 }
 
 // works in log(n) and assumes that both the left and right child are heaps themselves
 void Heapify(int node) {
-	int largest = node;
+	int largest = max(node, 1);
 	int left = 2 * node, right = 2 * node + 1;
 
-	if (left < len && tree[largest] < tree[left]) largest = left;
-	if (right < len && tree[largest] < tree[right]) largest = right;
+	if (left < len && func(tree[left] , tree[largest])) largest = left;
+	if (right < len && func(tree[right] , tree[largest])) largest = right;
 
 	if (largest != node) {
 		swap(tree[largest], tree[node]);
@@ -34,13 +34,15 @@ void insert(ll val) {
 
 	while (node) {
 		int parent = node / 2;
-		if (tree[parent] >= tree[node]) node = parent;
+		if (func(tree[node], tree[parent])) { // bigger node is pushed upward
+			swap(tree[node], tree[parent]);
+			node = parent;
+		}
 		else break;
 	}
-	Heapify(node / 2); // calling heapify from node ensures that its child are already heap
 
+	Heapify(max(node , 1)); // calling heapify from node ensures that its child are already heap
 }
-
 void deleteNode(int node) {
 	swap(tree[node], tree[len - 1]);
 	tree[len - 1] = 0;
@@ -48,10 +50,14 @@ void deleteNode(int node) {
 
 	while (node) {
 		int parent = node / 2;
-		if (tree[parent] >= tree[node]) node = parent;
+		if (func(tree[node], tree[parent])) { // bigger node is pushed upward
+			swap(tree[node], tree[parent]);
+			node = parent;
+		}
 		else break;
 	}
-	Heapify(node / 2); // calling heapify from node ensures that its child are already heap
+
+	Heapify(max(node , 1)); // calling heapify from node ensures that its child are already heap
 }
 
 // moves in bottom-up manner as this guarantees that whenever we apply heapify, the left and right child are heaps
@@ -80,8 +86,43 @@ void levelorder(int node) {
 	return;
 }
 
+ll peek() {
+	if (len <= 1) return -1;
+
+	return tree[1];
+}
+
+ll extract() {
+	if (len <= 1) return -1;
+
+	ll temp = tree[1];
+	deleteNode(1);
+	return temp;
+}
+
+bool validateHeap(int node = 1) {
+	if (node * 2 < len && !func(tree[node] , tree[node * 2])) return 0;
+	if (node * 2 + 1 < len && !func(tree[node] , tree[node * 2 + 1])) return 0;
+
+	bool ok = 1;
+	if (node * 2 < len && !validateHeap(node * 2)) ok = 0;
+	if (node * 2 + 1 < len && !validateHeap(node * 2 + 1)) ok = 0;
+	return ok;
+}
+
+bool isempty() {
+	return (len <= 1);
+}
+
+
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+ll range(ll l , ll r) {
+	ll n = uniform_int_distribution<int> (l , r)(rng);
+	return n;
+}
 
 int main() {
+	/*
 	n = 6;
 	A[0] = 3;
 	A[1] = 9;
@@ -106,7 +147,7 @@ int main() {
 
 	cout << "leftOrder: ";
 	levelorder(1);
-	// 9 4 5 1 3 2 7
+	// 9 4 7 1 3 2 5
 	cout << "\n";
 
 	cout << "Tree\n";
@@ -121,4 +162,38 @@ int main() {
 	levelorder(1);
 	// 9 5 7 1 4 2
 	cout << "\n";
+
+
+	cout << peek() << "\n";
+	cout << extract() << "\n";
+	cout << peek() << "\n";
+
+	cout << "leftOrder: ";
+	levelorder(1);
+	// 7 5 2 1 4
+	cout << "\n";
+
+	*/
+
+	int iters = 1000000;
+	while (iters--) {
+		int x = range(0, 1);
+		int n = range(1, 50);
+
+		if (x == 0) insert(n);
+		else extract();
+
+		if (validateHeap()) {
+			cout << "correct\n";
+			// cout << x << " " << n << " : " << len << "levelorder: ";
+			// levelorder(1);
+			// cout << "\n\n";
+		}
+		else {
+			cout << "levelorder: ";
+			levelorder(1);
+			exit(1);
+		}
+		assert(validateHeap());
+	}
 }

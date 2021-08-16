@@ -1,0 +1,29 @@
+<snippet>
+	<content><![CDATA[
+vector<long long> nearest_smallest_on_left(vector<long long> &A) {
+    int n = A.size();
+    stack<pair<long long, long long>> s;
+    vector<long long> index(n, -1);
+
+    for (int i = 0; i < n; i++) {
+        int x = A[i];
+        while (!s.empty() && s.top().first >= x) s.pop();
+        if (s.empty()) index[i] = -1;
+        else index[i] = s.top().second;
+
+        s.push(make_pair(A[i], i));
+    }
+
+    return index;
+}
+// reverse(A.begin(), A.end());
+// vector<int> right = nearest_smallest_on_left(A);
+// reverse(right.begin(), right.end());
+// for (int i = 0; i < n; i++) if (right[i] != -1) right[i] = n - 1 - right[i];
+// reverse(A.begin(), A.end());
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>nearest_smallest</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

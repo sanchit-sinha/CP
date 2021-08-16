@@ -1,0 +1,59 @@
+<snippet>
+	<content><![CDATA[
+const int MX = 26;
+// Insert and search costs O(key_length)
+// memory requirements of Trie is O(MX * key_length * N)
+struct TrieNode {
+	struct TrieNode* children[MX];
+	bool endofWord;
+
+	TrieNode() {
+		endofWord = false;
+		for (int i = 0; i < MX; i++) children[i] = NULL;
+	}
+};
+void insert(TrieNode* root, string &key) {
+	TrieNode* temp = root;
+	for (int i = 0; i < key.size(); i++) {
+		int index = key[i] - 'a';
+		if (temp->children[index] == NULL) {
+			temp->children[index] = new TrieNode();
+		}
+		temp = temp->children[index];
+	}
+	temp->endofWord = true;
+	return;
+}
+bool search(TrieNode* root, string &key) {
+	TrieNode* temp = root;
+	for (int i = 0; i < key.size(); i++) {
+		int index = key[i] - 'a';
+		if (temp->children[index] == NULL) return 0;
+		temp = temp->children[index];
+	}
+	if (temp->endofWord == false) return 0;
+	return 1;
+}
+bool isempty(TrieNode* root) {
+    for (int i = 0; i < MX; i++) if (root->children[i]) return 0;
+    return 1;
+}
+TrieNode* erase(TrieNode* root, string &key, int depth = 0) {
+    if (!root) return NULL;
+    if (depth == key.size()) {
+        if (root->endofWord) root->endofWord = false;
+        if (isempty(root))delete root, root = NULL;
+        return root;
+    }
+
+    int index = key[depth] - 'a';
+    root->children[index] = erase(root->children[index], key, depth + 1);
+    if (isempty(root) && root->endofWord == false) delete root, root = NULL;
+    return root;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>trie</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

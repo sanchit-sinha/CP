@@ -1,0 +1,38 @@
+<snippet>
+	<content><![CDATA[
+void find_permutation(vll &permutation, set<ll> &str, ll n, ll k, const vll &fact) { // k : 1 indexed
+    if (k == 0) {
+        for (auto it = str.rbegin(); it != str.rend(); it++) {
+            permutation.pb(*it);
+        }
+        str.clear();
+        return;
+    }
+
+    ll moves_placing_smallest = fact[n - 1]; // update
+    // place beta'th position if, beta * moves_placing_smallest >= k (considering all unique)
+    ll first_place = (k + moves_placing_smallest - 1) / moves_placing_smallest;  // first place : 1 indexed
+
+    ll element = -1;
+    ll pos = 1;
+    for (auto x : str) { // finding element at first place : update
+        if (pos == first_place) {
+            element = x;
+            break;
+        }
+        pos++;
+    }
+
+    if (element != -1) {
+        permutation.pb(element);
+        k -= (first_place - 1) * moves_placing_smallest; // update k if first_place > 1
+        if (str.count(element)) str.erase(str.find(element));
+        find_permutation(permutation, str, n - 1, k, fact);
+    }
+    return ;
+}]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>find_permutation</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

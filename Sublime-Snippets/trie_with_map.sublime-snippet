@@ -1,0 +1,32 @@
+<snippet>
+	<content><![CDATA[
+const int MX_SZ = 1e5 + 11;
+map<int, int> trie[MX_SZ];
+int endofWord[MX_SZ], ptr;
+void insert(string &key) {
+    int n = (int)key.size(), index = 0;
+    for (int i = 0; i < n; i++) {
+        if (!trie[index].count(key[i] - 'a')) trie[index][key[i] - 'a'] = ++ptr;
+        index = trie[index][key[i] - 'a'];
+    }
+    endofWord[index]++;
+}
+void erase(string &key) {
+    int n = (int)key.size(), index = 0;
+
+}
+bool search(string &key) {
+    int n = (int)key.size(), index = 0;
+    for (int i = 0; i < n; i++) {
+        if (!trie[index].count(key[i] - 'a')) return 0;
+        index = trie[index][key[i] - 'a'];
+    }
+    if (endofWord[index]) return 1;
+    return 0;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>trie_with_map</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

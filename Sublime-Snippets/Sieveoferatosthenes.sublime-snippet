@@ -10,7 +10,10 @@ void sieve(){
             for (ll i = p*p ; i <= mX; i += p) prime[i]=false; 
         } 
     } 
-}]]></content>
+}
+// note that the complexity is sqrt(n)*log(n)
+// can't store all prime numbers directly(need to iterate all numbers : nlog(n)) 
+]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>sieve</tabTrigger>
 	<!-- Optional: Set a scope to limit where the snippet will trigger -->

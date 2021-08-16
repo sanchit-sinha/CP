@@ -1,13 +1,19 @@
 {
 	"atomic_save": true,
+	// "color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
+	"theme": "Adaptive.sublime-theme",
 	"detect_indentation": true,
-	"font_size": 8,
+	/*"font_size": 8,*/
 	"ignored_packages":
 	[
 		"Vintage",
+		"zzz A File Icon zzz",
 	],
 	"save_on_focus_lost": true,
 	"tab_size": 4,
-	"theme": "Adaptive.sublime-theme",
+	/*"theme": "Adaptive.sublime-theme",*/
+	"font_face": "YaHei Consolas Hybrid",
+	"font_size": 10,
+	"indent_guide_options": ["draw_normal", "draw_active"],
 }

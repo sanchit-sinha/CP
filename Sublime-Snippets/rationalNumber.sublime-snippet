@@ -1,0 +1,105 @@
+<snippet>
+	<content><![CDATA[
+struct RationalNumber {
+    int p, q;
+    RationalNumber() {
+        p = 0, q = 1;
+    }
+    RationalNumber(int num, int den) {
+        assert(den != 0);
+        p = num, q = den;
+        int g = gcd(p, q);
+        p /= g, q /= g;
+    }
+
+    // first argument R1 is understood here
+    RationalNumber operator +(RationalNumber other) {
+        int p1 = this->p;
+        int q1 = this->q;
+
+        int p2 = other.p;
+        int q2 = other.q;
+
+        return RationalNumber(q2 * p1 + p2 * q1, q1 * q2);
+    }
+    RationalNumber operator *(RationalNumber other) {
+        int p1 = this->p;
+        int q1 = this->q;
+
+        int p2 = other.p;
+        int q2 = other.q;
+
+        return RationalNumber(p1 * p2 , q1 * q2);
+    }
+
+    bool operator >(RationalNumber other) {
+        int p1 = this->p;
+        int q1 = this->q;
+
+        int p2 = other.p;
+        int q2 = other.q;
+
+        return (q2 * p1 > p2 * q1);
+    }
+
+    bool operator <(RationalNumber other) {
+        int p1 = this->p;
+        int q1 = this->q;
+
+        int p2 = other.p;
+        int q2 = other.q;
+
+        return (q2 * p1 < p2 * q1);
+    }
+
+
+    bool operator >=(RationalNumber other) {
+        int p1 = this->p;
+        int q1 = this->q;
+
+        int p2 = other.p;
+        int q2 = other.q;
+
+        return (q2 * p1 >= p2 * q1);
+    }
+
+    bool operator <=(RationalNumber other) {
+        int p1 = this->p;
+        int q1 = this->q;
+
+        int p2 = other.p;
+        int q2 = other.q;
+
+        return (q2 * p1 <= p2 * q1);
+    }
+
+    bool operator ==(RationalNumber other) {
+        int p1 = this->p;
+        int q1 = this->q;
+
+        int p2 = other.p;
+        int q2 = other.q;
+
+        return (q2 * p1 == p2 * q1);
+    }
+
+};
+
+bool operator !=(RationalNumber R1, RationalNumber R2) {// use two arguments
+    int p1 = R1.p;
+    int q1 = R1.q;
+
+    int p2 = R2.p;
+    int q2 = R2.q;
+
+    return (q2 * p1 != p2 * q1);
+}
+ostream& operator <<(ostream& out, RationalNumber R) {
+    out << R.p << "/" << R.q ;
+    return out;
+}]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>Rational Number</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

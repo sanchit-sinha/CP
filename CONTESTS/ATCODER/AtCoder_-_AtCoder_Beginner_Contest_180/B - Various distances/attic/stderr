@@ -1,4 +1,0 @@
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/AtCoder - AtCoder Beginner Contest 180/B - Various distances/sol.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/AtCoder - AtCoder Beginner Contest 180/B - Various distances/sol.cpp:30:14:[m[K [01;31m[Kerror: [m[K‘[01m[Klong long[m[K’ specified with ‘[01m[Kdouble[m[K’
-   30 |         long [01;31m[Klong[m[K double x=sqrt(ans2);
-      |              [01;31m[K^~~~[m[K

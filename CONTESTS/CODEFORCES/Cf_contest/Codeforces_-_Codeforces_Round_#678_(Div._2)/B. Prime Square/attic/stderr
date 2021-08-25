@@ -1,4 +1,0 @@
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #678 (Div. 2)/B. Prime Square/sol.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #678 (Div. 2)/B. Prime Square/sol.cpp:42:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ka[m[K’ was not declared in this scope
-   42 |         [01;31m[Ka[m[K[n/2][n/2]=5;
-      |         [01;31m[K^[m[K

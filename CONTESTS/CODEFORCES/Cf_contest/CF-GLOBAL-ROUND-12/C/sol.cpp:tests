@@ -1,9 +1,0 @@
-[
-	{
-		"correct_answers":
-		[
-			".X.\nXOX\n.X.\nXX.XXO\nXOXXOX\nOXX.XX\nXOOXXO\nXX.X.X\nOXXOXX\nXOX.X\n.X..X\nXXO.O\n..X..\n..X.."
-		],
-		"test": "3\n3\n.X.\nXXX\n.X.\n6\nXX.XXX\nXXXXXX\nXXX.XX\nXXXXXX\nXX.X.X\nXXXXXX\n5\nXXX.X\n.X..X\nXXX.X\n..X..\n..X..\n"
-	}
-]

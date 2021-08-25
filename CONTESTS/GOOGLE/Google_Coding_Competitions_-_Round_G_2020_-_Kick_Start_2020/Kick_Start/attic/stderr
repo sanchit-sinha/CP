@@ -1,6 +1,0 @@
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Google Coding Competitions - Round G 2020 - Kick Start 2020/Kick_Start/sol.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Google Coding Competitions - Round G 2020 - Kick Start 2020/Kick_Start/sol.cpp:42:54:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[Kn[m[K’ from ‘[01m[Klong long int[m[K’ to ‘[01m[Kstd::string[m[K’ {aka ‘[01m[Kstd::__cxx11::basic_string<char>[m[K’}
-   42 |                                 if(check("START",i,5,[01;31m[Kn[m[K)){
-      |                                                      [01;31m[K^[m[K
-      |                                                      [01;31m[K|[m[K
-      |                                                      [01;31m[Klong long int[m[K

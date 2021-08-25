@@ -1,4 +1,0 @@
-Testcase # 1
-[not_used, main_num]:  {} {}
-[not_used]:  {}
-[b]:  {0}

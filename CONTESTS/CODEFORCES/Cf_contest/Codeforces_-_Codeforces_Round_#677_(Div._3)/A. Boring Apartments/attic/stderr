@@ -1,4 +1,0 @@
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #677 (Div. 3)/A. Boring Apartments/sol.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #677 (Div. 3)/A. Boring Apartments/sol.cpp:32:36:[m[K [01;31m[Kerror: [m[Kunable to find string literal operator ‘[01m[Koperator""l[m[K’ with ‘[01m[Kconst char [2][m[K’, ‘[01m[Klong unsigned int[m[K’ arguments
-   32 |                 else cout<<ans+10<<[01;31m[K"\n"l[m[K
-      |                                    [01;31m[K^~~~~[m[K

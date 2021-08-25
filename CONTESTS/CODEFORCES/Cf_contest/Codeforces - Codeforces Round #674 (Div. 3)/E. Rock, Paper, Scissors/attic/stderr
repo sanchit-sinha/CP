@@ -1,4 +1,0 @@
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #674 (Div. 3)/E. Rock, Paper, Scissors/sol.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #674 (Div. 3)/E. Rock, Paper, Scissors/sol.cpp:180:91:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K;[m[K’ before ‘[01m[K)[m[K’ token
-  180 |         ll mn_won_a = min((x - wonb.first - wonb.second) , x - wonb2.first - wonb2.second)[01;31m[K)[m[K;
-      |                                                                                           [01;31m[K^[m[K

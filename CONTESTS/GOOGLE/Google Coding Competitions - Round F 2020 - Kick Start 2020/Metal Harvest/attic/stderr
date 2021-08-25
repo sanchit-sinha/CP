@@ -1,5 +1,0 @@
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Google Coding Competitions - Round F 2020 - Kick Start 2020/Metal Harvest/sol.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Google Coding Competitions - Round F 2020 - Kick Start 2020/Metal Harvest/sol.cpp:87:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct std::pair<long long int, long long int>[m[K’ has no member named ‘[01m[Ksecondf[m[K’; did you mean ‘[01m[Ksecond[m[K’?
-   87 |                                         ans+=p.[01;31m[Ksecondf[m[K;
-      |                                                [01;31m[K^~~~~~~[m[K
-      |                                                [32m[Ksecond[m[K

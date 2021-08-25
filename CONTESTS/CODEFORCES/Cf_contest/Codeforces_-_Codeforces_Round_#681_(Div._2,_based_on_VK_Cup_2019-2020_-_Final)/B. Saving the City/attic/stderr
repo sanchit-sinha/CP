@@ -1,4 +1,0 @@
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #681 (Div. 2, based on VK Cup 2019-2020 - Final)/B. Saving the City/sol.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #681 (Div. 2, based on VK Cup 2019-2020 - Final)/B. Saving the City/sol.cpp:60:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass std::vector<std::pair<long long int, long long int> >[m[K’ has no member named ‘[01m[Ksecond[m[K’
-   60 |     rep(i,len) cout<<prs[i].first<<" " << prs.[01;31m[Ksecond[m[K<<"\n";
-      |                                               [01;31m[K^~~~~~[m[K

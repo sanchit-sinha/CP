@@ -1,7 +1,0 @@
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #395 (Div. 1)/A. Timofey and a tree/sol.cpp:[m[K In function ‘[01m[Kvoid dfs2(long long int, long long int)[m[K’:
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #395 (Div. 1)/A. Timofey and a tree/sol.cpp:59:27:[m[K [01;31m[Kerror: [m[Ktoo many arguments to function ‘[01m[Kvoid dfs(long long int)[m[K’
-   59 |             dfs(child,node[01;31m[K)[m[K;
-      |                           [01;31m[K^[m[K
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #395 (Div. 1)/A. Timofey and a tree/sol.cpp:47:6:[m[K [01;36m[Knote: [m[Kdeclared here
-   47 | void [01;36m[Kdfs[m[K(ll node){
-      |      [01;36m[K^~~[m[K

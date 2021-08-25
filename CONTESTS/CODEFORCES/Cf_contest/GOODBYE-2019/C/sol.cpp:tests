@@ -1,9 +1,0 @@
-[
-	{
-		"correct_answers":
-		[
-			"1\n1\n0\n1\n1\n4\n0"
-		],
-		"test": "7\nbabba\nabaac\ncodeforces\nzeroorez\nabcdcba\nbbbbbbb\na\n"
-	}
-]

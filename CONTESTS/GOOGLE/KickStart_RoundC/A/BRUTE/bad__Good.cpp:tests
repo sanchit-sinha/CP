@@ -1,9 +1,0 @@
-[
-	{
-		"correct_answers":
-		[
-			"Case #1: 2\nCase #2: 8\nCase #3: 3"
-		],
-		"test": "1\n\t3 1\n\taca\n\t"
-	}
-]

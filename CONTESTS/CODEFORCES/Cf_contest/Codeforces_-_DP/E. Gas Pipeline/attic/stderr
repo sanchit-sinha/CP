@@ -1,4 +1,0 @@
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - DP/E. Gas Pipeline/sol.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - DP/E. Gas Pipeline/sol.cpp:75:29:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
-   75 |             if(dp[i-1][0]!=-[01;31m[K)[m[K dp[i][0]=min(dp[i][0],dp[i-1][0]+a);
-      |                             [01;31m[K^[m[K

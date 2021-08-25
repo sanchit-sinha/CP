@@ -1,4 +1,0 @@
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/CodeChef - October Lunchtime 2020 Division 1/Chef Is Just Throwing Random Words/sol.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/CodeChef - October Lunchtime 2020 Division 1/Chef Is Just Throwing Random Words/sol.cpp:61:25:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K;[m[K’ token
-   61 |         ll x=pfx[i-1]-i+[01;31m[K;[m[K
-      |                         [01;31m[K^[m[K

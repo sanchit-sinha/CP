@@ -1,4 +1,0 @@
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Grakn Forces 2020/C. Discrete Acceleration/sol.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Grakn Forces 2020/C. Discrete Acceleration/sol.cpp:68:51:[m[K [01;31m[Kerror: [m[Klvalue required as left operand of assignment
-   68 |                         if(l+1 == r|| r-1==l || l=[01;31m[Kr[m[K) break;
-      |                                                   [01;31m[K^[m[K

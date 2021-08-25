@@ -1,4 +1,0 @@
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/AtCoder - AtCoder Beginner Contest 180/E - Traveling Salesman among Aerial Cities/sol.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/AtCoder - AtCoder Beginner Contest 180/E - Traveling Salesman among Aerial Cities/sol.cpp:113:50:[m[K [01;31m[Kerror: [m[Kinvalid use of void expression
-  113 |         for(ll i=2;i<=n;i++) ans2=min(ans2,dij(i)[01;31m[K)[m[K;
-      |                                                  [01;31m[K^[m[K

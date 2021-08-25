@@ -1,4 +1,0 @@
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/AtCoder - AtCoder Beginner Contest 179/A - Plural Form/sol.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/AtCoder - AtCoder Beginner Contest 179/A - Plural Form/sol.cpp:19:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kn[m[K’ was not declared in this scope
-   19 |     if(s[[01;31m[Kn[m[K-1]=='s') s+="es";
-      |          [01;31m[K^[m[K

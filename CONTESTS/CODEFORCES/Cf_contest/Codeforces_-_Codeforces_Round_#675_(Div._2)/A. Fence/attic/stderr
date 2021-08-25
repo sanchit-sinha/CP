@@ -1,4 +1,0 @@
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #675 (Div. 2)/A. Fence/sol.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #675 (Div. 2)/A. Fence/sol.cpp:21:25:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
-   21 |                 cin>>a>>[01;31m[K>[m[Kb>c;
-      |                         [01;31m[K^[m[K

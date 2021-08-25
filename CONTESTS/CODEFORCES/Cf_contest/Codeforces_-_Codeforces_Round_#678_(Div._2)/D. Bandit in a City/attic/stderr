@@ -1,4 +1,0 @@
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #678 (Div. 2)/D. Bandit in a City/sol.cpp:[m[K In function ‘[01m[Kvoid dfs(long long int, long long int)[m[K’:
-[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #678 (Div. 2)/D. Bandit in a City/sol.cpp:25:26:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ was not declared in this scope
-   25 |     subtree_sum[node]+=a[[01;31m[Ki[m[K];
-      |                          [01;31m[K^[m[K

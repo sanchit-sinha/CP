@@ -1,8 +1,0 @@
-Testcase # 1
-[s]: "jbncjbncjbnc"
-
- j : n
-[i , before_split]: 2
- "jb"
-
-*************************

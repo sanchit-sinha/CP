@@ -1,8 +1,14 @@
 # SCRIPTS RELATED TO CP  
 <li>
-    Old-Scripts
+    <b>Old-Scripts</b>
+    <ul>
+        Contains old scripts
+    </ul>
 </li>
 
 <li>
-    Testing-Scripts: Script for testing and debugging your code
+    <b>Testing-Scripts</b>
+    <ul>
+    Script for testing and debugging your code
+    </ul>
 </li>

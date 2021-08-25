@@ -1,4 +1,4 @@
-# Contains submissions over some of the programming platforms
+## Contains submissions over some of the programming platforms
 <ul>
 <li>
     Atcoder

@@ -1,29 +1,47 @@
 <h1 align="center"> COMPETETIVE PROGRAMMING </h1>
-<h2 align="left"> Collection of important data structures and codes for competitive programming </h2> 
+<h2 align="center"> Collection of important data structures and codes for competitive programming </h2> 
 
 <ul>
 <li>
-   Books: Contains materials related to Competetive Programming 
+   <b>Books</b>
+   <ul>
+      Contains materials related to Competetive Programming  
+   </ul>
 </li>
 
 <li>
-   Contests: Contains my submissions over some of the popular platforms
+      <b>Contests</b>
+   <ul>
+   Contains my submissions over some of the popular platforms
+   </ul>
 </li>
 
 <li>
-   Notes: Contains notes and educational problems related to certain topic
+   <b>Notes</b>
+   <ul>
+   Contains notes and educational problems related to certain topic
+   </ul>
 </li>
 
 <li>
-   Random-Submissions: Contains random submission over some of the platforms
+   <b>Random-Submissions</b>
+   <ul>
+    Contains random submission over some of the platforms
+   </ul>
 </li>
 
 <li>
-   Scripts: Contains scripts for debugging your code 
+   <b>Scripts</b>
+   <ul>
+   Contains scripts for debugging your code 
+   </ul>
 </li>
 
 <li>
-   Templates: Contains template related to algorithms and data structures
+   <b>Templates</b>
+   <ul>
+   Contains template related to algorithms and data structures
+   </ul>
 </li>
 
 </ul>

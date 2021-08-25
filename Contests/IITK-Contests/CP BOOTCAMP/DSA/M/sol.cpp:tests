@@ -1,0 +1,23 @@
+[
+	{
+		"correct_answers":
+		[
+			".t.r"
+		],
+		"test": "tour\n"
+	},
+	{
+		"correct_answers":
+		[
+			".c.d.f.r.c.s"
+		],
+		"test": "Codeforces\n"
+	},
+	{
+		"correct_answers":
+		[
+			".b.c.b"
+		],
+		"test": "aBAcAba\n"
+	}
+]

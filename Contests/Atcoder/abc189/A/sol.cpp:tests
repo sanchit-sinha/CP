@@ -1,0 +1,16 @@
+[
+	{
+		"correct_answers":
+		[
+			"Won"
+		],
+		"test": "SSS\n"
+	},
+	{
+		"correct_answers":
+		[
+			"Lost"
+		],
+		"test": "WVW\n"
+	}
+]

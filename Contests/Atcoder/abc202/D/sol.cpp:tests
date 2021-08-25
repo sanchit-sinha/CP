@@ -1,0 +1,19 @@
+[
+	{
+		"correct_answers":
+		[
+			"baab"
+		],
+		"test": "2 2 4\n"
+	},
+	{
+		"correct_answers":
+		[
+			"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+		],
+		"test": "30 30 118264581564861424\n"
+	},
+	{
+		"test": "2 2 6\n"
+	}
+]

@@ -1,0 +1,7 @@
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #673 (Div. 2)/C. k-Amazing Numbers/sol.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #673 (Div. 2)/C. k-Amazing Numbers/sol.cpp:38:57:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+   38 |                         ans[index] = min(ans[index] , x)
+      |                                                         [01;31m[K^[m[K
+      |                                                         [32m[K;[m[K
+   39 |                 [32m[K}[m[K
+      |                 [32m[K~[m[K                                        

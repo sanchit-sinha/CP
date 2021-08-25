@@ -1,0 +1,21 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #679 (Div. 2, based on Technocup 2021 Elimination Round 1)/A. Finding Sasuke/sol.cpp"
+  },
+  "bruteSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #679 (Div. 2, based on Technocup 2021 Elimination Round 1)/A. Finding Sasuke/brute.cpp"
+  },
+  "generator": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #679 (Div. 2, based on Technocup 2021 Elimination Round 1)/A. Finding Sasuke/gen.py"
+  },
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "A. Finding Sasuke",
+      "group": "Codeforces - Codeforces Round #679 (Div. 2, based on Technocup 2021 Elimination Round 1)",
+      "url": "https://codeforces.com/contest/1435/problem/0",
+      "memoryLimit": 256,
+      "timeLimit": 1000
+    }
+  }
+}

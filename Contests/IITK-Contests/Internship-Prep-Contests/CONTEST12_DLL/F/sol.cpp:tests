@@ -1,0 +1,9 @@
+[
+	{
+		"correct_answers":
+		[
+			"HVVH\nVHHV"
+		],
+		"test": "2\n2 2 2\n2 2 3\n"
+	}
+]

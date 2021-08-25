@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #677 (Div. 3)/C. Dominant Piranha/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "C. Dominant Piranha",
+      "group": "Codeforces - Codeforces Round #677 (Div. 3)",
+      "url": "https://codeforces.com/contest/1433/problem/C",
+      "memoryLimit": 256,
+      "timeLimit": 2000
+    }
+  }
+}

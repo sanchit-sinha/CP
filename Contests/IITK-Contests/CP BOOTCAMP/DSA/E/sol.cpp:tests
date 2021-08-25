@@ -1,0 +1,23 @@
+[
+	{
+		"correct_answers":
+		[
+			"YES"
+		],
+		"test": "SANTACLAUS\nDEDMOROZ\nSANTAMOROZDEDCLAUS\n"
+	},
+	{
+		"correct_answers":
+		[
+			"NO"
+		],
+		"test": "PAPAINOEL\nJOULUPUKKI\nJOULNAPAOILELUPUKKI\n"
+	},
+	{
+		"correct_answers":
+		[
+			"NO"
+		],
+		"test": "BABBONATALE\nFATHERCHRISTMAS\nBABCHRISTMASBONATALLEFATHER\n"
+	}
+]

@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - 2020 ICPC, COMPFEST 12, Indonesia Multi-Provincial Contest (Unrated, Online Mirror, ICPC Rules, Teams Preferred)/A. Arena of Greed/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "A. Arena of Greed",
+      "group": "Codeforces - 2020 ICPC, COMPFEST 12, Indonesia Multi-Provincial Contest (Unrated, Online Mirror, ICPC Rules, Teams Preferred)",
+      "url": "https://codeforces.com/contest/1425/problem/A",
+      "memoryLimit": 256,
+      "timeLimit": 2000
+    }
+  }
+}

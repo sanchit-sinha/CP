@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #677 (Div. 3)/D. Districts Connection/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "D. Districts Connection",
+      "group": "Codeforces - Codeforces Round #677 (Div. 3)",
+      "url": "https://codeforces.com/contest/1433/problem/D",
+      "memoryLimit": 256,
+      "timeLimit": 1000
+    }
+  }
+}

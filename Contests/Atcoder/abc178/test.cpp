@@ -1,0 +1,1 @@
+<a href="https://pjreddie.com/media/files/yolov3.weights" class="cm iw ki kj kk kl" target="_blank" rel="noopener nofollow">pre-train model weights</a>

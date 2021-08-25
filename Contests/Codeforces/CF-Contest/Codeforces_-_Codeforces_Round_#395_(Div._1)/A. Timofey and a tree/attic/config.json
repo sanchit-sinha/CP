@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #395 (Div. 1)/A. Timofey and a tree/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "A. Timofey and a tree",
+      "group": "Codeforces - Codeforces Round #395 (Div. 1)",
+      "url": "https://codeforces.com/contest/763/problem/A",
+      "memoryLimit": 256,
+      "timeLimit": 2000
+    }
+  }
+}

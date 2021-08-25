@@ -1,0 +1,13 @@
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Google Coding Competitions - Round H 2020 - Kick Start 2020/Friends/sol.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Google Coding Competitions - Round H 2020 - Kick Start 2020/Friends/sol.cpp:175:34:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(std::vector<long long int>) (long long int&)[m[K’
+  175 |             cout<<abs(LCA.depth(x[01;31m[K)[m[K - LCA.depth(comman)) + abs(LCA.depth(y) - LCA.depth(comman))<<" ";
+      |                                  [01;31m[K^[m[K
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Google Coding Competitions - Round H 2020 - Kick Start 2020/Friends/sol.cpp:175:54:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(std::vector<long long int>) (long long int&)[m[K’
+  175 |             cout<<abs(LCA.depth(x) - LCA.depth(comman[01;31m[K)[m[K) + abs(LCA.depth(y) - LCA.depth(comman))<<" ";
+      |                                                      [01;31m[K^[m[K
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Google Coding Competitions - Round H 2020 - Kick Start 2020/Friends/sol.cpp:175:74:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(std::vector<long long int>) (long long int&)[m[K’
+  175 |             cout<<abs(LCA.depth(x) - LCA.depth(comman)) + abs(LCA.depth(y[01;31m[K)[m[K - LCA.depth(comman))<<" ";
+      |                                                                          [01;31m[K^[m[K
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Google Coding Competitions - Round H 2020 - Kick Start 2020/Friends/sol.cpp:175:94:[m[K [01;31m[Kerror: [m[Kno match for call to ‘[01m[K(std::vector<long long int>) (long long int&)[m[K’
+  175 |             cout<<abs(LCA.depth(x) - LCA.depth(comman)) + abs(LCA.depth(y) - LCA.depth(comman[01;31m[K)[m[K)<<" ";
+      |                                                                                              [01;31m[K^[m[K

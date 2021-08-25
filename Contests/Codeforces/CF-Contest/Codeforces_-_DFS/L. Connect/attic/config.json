@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - DFS/L. Connect/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "L. Connect",
+      "group": "Codeforces - DFS",
+      "url": "https://codeforces.com/gym/300933/problem/L",
+      "memoryLimit": 256,
+      "timeLimit": 1000
+    }
+  }
+}

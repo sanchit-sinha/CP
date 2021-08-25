@@ -1,0 +1,30 @@
+[
+	{
+		"correct_answers":
+		[
+			"1110001"
+		],
+		"test": "1010100\n0100101\n"
+	},
+	{
+		"correct_answers":
+		[
+			"111"
+		],
+		"test": "000\n111\n"
+	},
+	{
+		"correct_answers":
+		[
+			"0100"
+		],
+		"test": "1110\n1010\n"
+	},
+	{
+		"correct_answers":
+		[
+			"00010"
+		],
+		"test": "01110\n01100\n"
+	}
+]

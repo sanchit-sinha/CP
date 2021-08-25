@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - DP/I. Vasya and Multisets/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "I. Vasya and Multisets",
+      "group": "Codeforces - DP",
+      "url": "https://codeforces.com/gym/301084/problem/I",
+      "memoryLimit": 256,
+      "timeLimit": 1000
+    }
+  }
+}

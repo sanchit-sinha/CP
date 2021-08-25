@@ -1,0 +1,4 @@
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Grakn Forces 2020/B. Arrays Sum/sol.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Grakn Forces 2020/B. Arrays Sum/sol.cpp:46:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kl[m[K’ was not declared in this scope
+   46 |                 cout<<ans<<"\n";[01;31m[Kl[m[K
+      |                                 [01;31m[K^[m[K

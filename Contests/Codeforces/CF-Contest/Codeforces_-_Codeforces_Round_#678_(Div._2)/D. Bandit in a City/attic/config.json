@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #678 (Div. 2)/D. Bandit in a City/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "D. Bandit in a City",
+      "group": "Codeforces - Codeforces Round #678 (Div. 2)",
+      "url": "https://codeforces.com/problemset/problem/1436/D",
+      "memoryLimit": 256,
+      "timeLimit": 1000
+    }
+  }
+}

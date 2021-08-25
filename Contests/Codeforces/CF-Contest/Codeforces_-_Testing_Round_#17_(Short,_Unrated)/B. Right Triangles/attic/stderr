@@ -1,0 +1,4 @@
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Testing Round #17 (Short, Unrated)/B. Right Triangles/sol.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Testing Round #17 (Short, Unrated)/B. Right Triangles/sol.cpp:58:22:[m[K [01;31m[Kerror: [m[Kunable to find string literal operator ‘[01m[Koperator""l[m[K’ with ‘[01m[Kconst char [2][m[K’, ‘[01m[Klong unsigned int[m[K’ arguments
+   58 |         cout << ans<<[01;31m[K"\n"l[m[K
+      |                      [01;31m[K^~~~~[m[K

@@ -1,0 +1,62 @@
+[
+	{
+		"correct_answers":
+		[
+			"7"
+		],
+		"test": "4\n2\n1\n2\n2\n3\n4\n"
+	},
+	{
+		"correct_answers":
+		[
+			"11"
+		],
+		"test": "5\n2\n1\n2\n2\n3\n5\n"
+	},
+	{
+		"correct_answers":
+		[
+			"6"
+		],
+		"test": "4\n2\n1\n2\n2\n4\n3\n"
+	},
+	{
+		"correct_answers":
+		[
+			"1",
+			"0"
+		],
+		"test": "1\n1\n1\n\n1\n1\n"
+	},
+	{
+		"correct_answers":
+		[
+			"3"
+		],
+		"test": "4\n\t3\n\t1\n\t1\n\t2\n\t3\n\t1\n\t2\n\t2\n\t"
+	},
+	{
+		"correct_answers":
+		[
+			"3"
+		],
+		"test": "3\n\t2\n\t2\n\t3\n\t2\n\t3\n\t3\n"
+	},
+	{
+		"correct_answers":
+		[
+			"3"
+		],
+		"test": "3\n\t2\n\t1\n\t1\n\t2\n\t2\n\t1\n"
+	},
+	{
+		"correct_answers":
+		[
+			"6"
+		],
+		"test": "4\n2\n1\n2\n2\n4\n3\n"
+	},
+	{
+		"test": "4\n\t4\n\t2\n\t4\n\t2\n\t3\n\t4\n\t1\n\t1\n\t4\n\t4\n"
+	}
+]

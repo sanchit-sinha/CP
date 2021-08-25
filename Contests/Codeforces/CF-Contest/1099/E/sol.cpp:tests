@@ -1,0 +1,28 @@
+[
+	{
+		"correct_answers":
+		[
+			"AG\nCT"
+		],
+		"test": "2 2\nAG\nCT\n"
+	},
+	{
+		"correct_answers":
+		[
+			"TGCAT\nCATGC\nTGCAT"
+		],
+		"test": "3 5\nAGCAG\nAGCAG\nAGCAG\n"
+	},
+	{
+		"test": "5 3 \nATG\nCTG\nAAG\nGCT\nGTC\n"
+	},
+	{
+		"test": "5 4\n\tCTCG\n\tGTGT\n\tTACC\n\tTAGA\n\tTGGA\n\n\n\n\n"
+	},
+	{
+		"test": "3 5\nTCAGT\nAAATC\nTTTTA\n"
+	},
+	{
+		"test": "4 5\n\tGTGCA\n\tACCGA\n\tTTCCT\n\tAATGT\n"
+	}
+]

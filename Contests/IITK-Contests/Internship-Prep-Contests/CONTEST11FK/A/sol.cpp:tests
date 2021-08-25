@@ -1,0 +1,19 @@
+[
+	{
+		"correct_answers":
+		[
+			"54321"
+		],
+		"test": "5\n2\n1\n3\n5\n4\n"
+	},
+	{
+		"correct_answers":
+		[
+			"433322"
+		],
+		"test": "3\n33\n22\n43\n"
+	},
+	{
+		"test": "3\n9 99 990\n"
+	}
+]

@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - DP/M. Restricted RPS/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "M. Restricted RPS",
+      "group": "Codeforces - DP",
+      "url": "https://codeforces.com/gym/301084/problem/M",
+      "memoryLimit": 256,
+      "timeLimit": 1000
+    }
+  }
+}

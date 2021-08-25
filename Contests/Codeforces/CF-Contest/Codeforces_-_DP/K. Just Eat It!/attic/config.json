@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - DP/K. Just Eat It!/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "K. Just Eat It!",
+      "group": "Codeforces - DP",
+      "url": "https://codeforces.com/gym/301084/problem/K",
+      "memoryLimit": 256,
+      "timeLimit": 1000
+    }
+  }
+}

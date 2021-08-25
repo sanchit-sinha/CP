@@ -1,0 +1,16 @@
+[
+	{
+		"correct_answers":
+		[
+			"4"
+		],
+		"test": "3\nvalya\nlyglb\nvldoh\nval\n"
+	},
+	{
+		"correct_answers":
+		[
+			"0"
+		],
+		"test": "5\nxzu\ndfw\neor\nmat\njyc\ncf\n"
+	}
+]

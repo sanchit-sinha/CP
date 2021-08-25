@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Educational Codeforces Round 98 (Rated for Div. 2)/B. Toy Blocks/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "B. Toy Blocks",
+      "group": "Codeforces - Educational Codeforces Round 98 (Rated for Div. 2)",
+      "url": "https://codeforces.com/contest/1452/problem/B",
+      "memoryLimit": 256,
+      "timeLimit": 2000
+    }
+  }
+}

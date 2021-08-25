@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Educational Codeforces Round 98 (Rated for Div. 2)/C. Two Brackets/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "C. Two Brackets",
+      "group": "Codeforces - Educational Codeforces Round 98 (Rated for Div. 2)",
+      "url": "https://codeforces.com/contest/1452/problem/C",
+      "memoryLimit": 256,
+      "timeLimit": 1000
+    }
+  }
+}

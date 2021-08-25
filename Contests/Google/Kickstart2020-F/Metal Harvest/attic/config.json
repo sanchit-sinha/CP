@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Google Coding Competitions - Round F 2020 - Kick Start 2020/Metal Harvest/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "Metal Harvest",
+      "group": "Google Coding Competitions - Round F 2020 - Kick Start 2020",
+      "url": "https://codingcompetitions.withgoogle.com/kickstart/round/000000000019ff48/00000000003f4b8b#analysis",
+      "memoryLimit": 1024,
+      "timeLimit": 30000
+    }
+  }
+}

@@ -1,0 +1,21 @@
+[
+	{
+		"correct_answers":
+		[
+			"Case #1: 2\nCase #2: 8\nCase #3: 3"
+		],
+		"test": "1\n\t3 2\n\tbba\n"
+	},
+	{
+		"test": "1\n3 4 \ndba\n"
+	},
+	{
+		"test": "1\n5 5\nabcdd\n"
+	},
+	{
+		"test": "1\n\t5 2\n\tabaab\n"
+	},
+	{
+		"test": "1\n\t6 3\n\tabcbac\n"
+	}
+]

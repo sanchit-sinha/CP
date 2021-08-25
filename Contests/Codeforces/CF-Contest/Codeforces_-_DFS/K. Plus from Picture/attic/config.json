@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - DFS/K. Plus from Picture/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "K. Plus from Picture",
+      "group": "Codeforces - DFS",
+      "url": "https://codeforces.com/gym/300933/problem/K",
+      "memoryLimit": 256,
+      "timeLimit": 1000
+    }
+  }
+}

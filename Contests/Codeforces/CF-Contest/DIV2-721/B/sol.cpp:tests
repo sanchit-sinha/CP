@@ -1,0 +1,9 @@
+[
+	{
+		"correct_answers":
+		[
+			"BOB\nBOB"
+		],
+		"test": "2\n4\n1001\n1\n0\n"
+	}
+]

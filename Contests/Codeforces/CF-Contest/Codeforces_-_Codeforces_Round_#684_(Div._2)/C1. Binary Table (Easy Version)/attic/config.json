@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #684 (Div. 2)/C1. Binary Table (Easy Version)/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "C1. Binary Table (Easy Version)",
+      "group": "Codeforces - Codeforces Round #684 (Div. 2)",
+      "url": "https://codeforces.com/contest/1440/problem/C1",
+      "memoryLimit": 256,
+      "timeLimit": 1000
+    }
+  }
+}

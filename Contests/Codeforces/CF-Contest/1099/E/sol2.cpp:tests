@@ -1,0 +1,19 @@
+[
+	{
+		"correct_answers":
+		[
+			"AG\nCT"
+		],
+		"test": "2 2\nAG\nCT\n"
+	},
+	{
+		"correct_answers":
+		[
+			"TGCAT\nCATGC\nTGCAT"
+		],
+		"test": "3 5\nAGCAG\nAGCAG\nAGCAG\n"
+	},
+	{
+		"test": "4 5\n\tGGAAA\n\tGCATC\n\tTTCGC\n\tCGTGC\n\t"
+	}
+]

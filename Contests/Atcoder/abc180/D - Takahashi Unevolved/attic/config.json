@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/AtCoder - AtCoder Beginner Contest 180/D - Takahashi Unevolved/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "D - Takahashi Unevolved",
+      "group": "AtCoder - AtCoder Beginner Contest 180",
+      "url": "https://atcoder.jp/contests/abc180/tasks/abc180_d",
+      "memoryLimit": 1024,
+      "timeLimit": 2000
+    }
+  }
+}

@@ -1,0 +1,4 @@
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - DP/I. Vasya and Multisets/sol.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - DP/I. Vasya and Multisets/sol.cpp:61:19:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K][m[K’ token
+   61 |                 m[[01;31m[Ka[m[K[i]]--;
+      |                   [01;31m[K^[m[K

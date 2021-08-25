@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/AtCoder - AtCoder Beginner Contest 179/A - Plural Form/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "A - Plural Form",
+      "group": "AtCoder - AtCoder Beginner Contest 179",
+      "url": "https://atcoder.jp/contests/abc179/tasks/abc179_a",
+      "memoryLimit": 1024,
+      "timeLimit": 2000
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Codeforces Round #673 (Div. 2)/C. k-Amazing Numbers/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "C. k-Amazing Numbers",
+      "group": "Codeforces - Codeforces Round #673 (Div. 2)",
+      "url": "https://codeforces.com/contest/1417/problem/C",
+      "memoryLimit": 256,
+      "timeLimit": 1000
+    }
+  }
+}

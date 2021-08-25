@@ -1,0 +1,17 @@
+{
+  "mainSolution": {
+    "value": "/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - DFS/O. Sorting by Subsequences/sol.cpp"
+  },
+  "bruteSolution": {},
+  "generator": {},
+  "checker": {},
+  "companionConfig": {
+    "value": {
+      "name": "O. Sorting by Subsequences",
+      "group": "Codeforces - DFS",
+      "url": "https://codeforces.com/gym/300933/problem/O",
+      "memoryLimit": 256,
+      "timeLimit": 1000
+    }
+  }
+}

@@ -1,0 +1,17 @@
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Educational Codeforces Round 98 (Rated for Div. 2)/C. Two Brackets/sol.cpp:[m[K In function ‘[01m[Kvoid solve()[m[K’:
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Educational Codeforces Round 98 (Rated for Div. 2)/C. Two Brackets/sol.cpp:56:24:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K{[m[K’ token
+   56 |         if(open1<close1[01;31m[K{[m[K
+      |                        [01;31m[K^[m[K
+      |                        [32m[K;[m[K
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Educational Codeforces Round 98 (Rated for Div. 2)/C. Two Brackets/sol.cpp:59:9:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kif[m[K’
+   59 |         [01;31m[Kif[m[K(open2<close2) go2=0;
+      |         [01;31m[K^~[m[K
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Educational Codeforces Round 98 (Rated for Div. 2)/C. Two Brackets/sol.cpp:58:10:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kif[m[K’
+   58 |         }
+      |          [01;31m[K^[m[K
+      |          [32m[K)[m[K
+   59 |         [32m[Kif[m[K(open2<close2) go2=0;
+      |         [32m[K~~[m[K
+[01m[K/home/sanchit/Desktop/CP/CONTESTS/ACMX_CONTESTS/Codeforces - Educational Codeforces Round 98 (Rated for Div. 2)/C. Two Brackets/sol.cpp:56:11:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   56 |         if[01;36m[K([m[Kopen1<close1{
+      |           [01;36m[K^[m[K

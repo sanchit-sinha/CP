@@ -1,0 +1,17 @@
+[
+	{
+		"test": "5\n1\nO\n3\nXFO\n5\nFFOFF\n10\nFXXFXFOOXF\n13\nXFOFXFOFXFOFX\n"
+	},
+	{
+		"test": "2\n10\nFXXFXFOOXF\n10\nFXFXXFOOXF\n"
+	},
+	{
+		"test": "1\n16\nFXXXFFXFOOFOFXXF\n"
+	},
+	{
+		"test": "1\n13\nXFOFXFOFXFOFX\n"
+	},
+	{
+		"test": "1\n10\nFXXFXFOOXF\n"
+	}
+]

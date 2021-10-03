@@ -1,0 +1,24 @@
+Testcase # 1
+[s]:  "RRRRRRRRRRUUUUU"
+[ctr, ctu]:  10 5
+*************************
+Testcase # 2
+[s]:  "UDDDRLLL"
+[ctr, ctu]:  1 1
+*************************
+Testcase # 3
+[s]:  "RURURUUUL"
+[ctr, ctu]:  3 5
+*************************
+Testcase # 4
+[s]:  "LLLLUU"
+[ctr, ctu]:  0 2
+*************************
+Testcase # 5
+[s]:  "RUDLRLLUR"
+[ctr, ctu]:  3 2
+*************************
+Testcase # 6
+[s]:  "LUDULUUUUL"
+[ctr, ctu]:  0 6
+*************************

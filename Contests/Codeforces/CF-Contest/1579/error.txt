@@ -1,0 +1,42 @@
+Testcase # 1
+[i, to_replace]:  0 1
+[i, to_replace]:  1 0
+1 0 
+[graph[i]]:  {0, 1}
+[x]:  1
+*************************
+Testcase # 2
+[i, to_replace]:  0 1
+[i, to_replace]:  1 2
+[i, to_replace]:  2 0
+1 2 0 
+[graph[i]]:  {0, 1, 0}
+[x]:  1
+*************************
+Testcase # 3
+[i, to_replace]:  0 3
+[i, to_replace]:  1 4
+[i, to_replace]:  2 0
+[i, to_replace]:  3 1
+[i, to_replace]:  4 2
+3 4 0 1 2 
+[graph[i]]:  {1, 1, 1, 0, 0}
+[x]:  3
+*************************
+Testcase # 4
+[i, to_replace]:  0 2
+[i, to_replace]:  1 3
+[i, to_replace]:  2 0
+[i, to_replace]:  3 1
+2 3 0 1 
+[graph[i]]:  {0, 0}
+[x]:  0
+[graph[i]]:  {1, 1}
+[x]:  4000000000000000000
+*************************
+Testcase # 5
+[i, to_replace]:  0 0
+0 
+[graph[i]]:  {0}
+[x]:  0
+*************************

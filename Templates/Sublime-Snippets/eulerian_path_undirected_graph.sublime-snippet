@@ -1,0 +1,51 @@
+<snippet>
+	<content><![CDATA[
+set<int> v[N];
+vector<int> EulerPath;
+int out[N];
+void dfs_EulerPath(int node) {
+    while (out[node]) {
+        int child = *v[node].begin();
+        v[node].erase(v[node].find(child));
+        v[child].erase(v[child].find(node));
+
+        out[node]--;
+        out[child]--;
+
+        dfs_EulerPath(child);
+    }
+    if (!out[node]) EulerPath.push_back(node);
+}
+
+bool findEulerianPath() { /* 1: if its possible to find a eulerPath */
+    // calculate the degree for each node
+    for (int i = 1; i <= n; i++) {
+        debug(i, v[i]);
+        trav(it, v[i]) {
+            out[i]++;
+        }
+    }
+
+    // check if its possible to find euler path or not
+    int node = -1;
+    for (int i = 1; i <= n; i++) {
+        if (out[i] & 1) return 0;
+        else node = i;
+    }
+    if (node == -1) return 0;
+
+    dfs_EulerPath(node);
+
+    // checking if all the edges are connected or not
+    for (int i = 1; i <= n; i++) {
+        if (out[i]) return 0;
+    }
+
+    return true;
+}
+]]></content>
+	Optional: Set a tabTrigger to define how to trigger the snippet
+	<tabTrigger>eulerian_path_for_undirected_graph</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

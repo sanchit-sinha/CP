@@ -1,0 +1,37 @@
+<snippet>
+	<content><![CDATA[
+/* finding number of bridges in an undirected graph */
+vll v[N];
+ll level[N], dp[N]; // dp[i] : no of back edges passing the edge between i and parent[i]
+void dfs(int node, int pr) {
+    for (auto child : v[node]) {
+        if (level[child] == 0) {
+            level[child] = level[node] + 1;
+            dfs(child, node);
+            dp[node] += dp[child];
+        }
+        else if (level[child] < level[node]) dp[node]++;
+        else if (level[child] > level[node]) dp[node]--;
+    }
+    dp[node]--;
+}
+ll findBridges() {
+    level[1] = 1;
+    dfs(1, -1);
+
+    ll ans = 0ll;
+    for (int i = 1; i <= n; i++) {
+        if (dp[i] == 0 && level[i] > 1) {
+            /*i -> parent[i]: this edge is a bridge */
+            ans++;
+        }
+    }
+
+    return ans;
+}
+]]></content>
+	Optional: Set a tabTrigger to define how to trigger the snippet
+	<tabTrigger>bridges_in_undirected_graph</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

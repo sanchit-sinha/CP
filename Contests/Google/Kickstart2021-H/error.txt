@@ -1,0 +1,28 @@
+Testcase # 1
+[index]:  {0}
+*************************
+Testcase # 2
+[index]:  {0}
+[index]:  {1}
+*************************
+Testcase # 3
+*************************
+Testcase # 4
+[index]:  {9}
+[index]:  {8}
+[index]:  {7}
+[index]:  {6}
+[index]:  {5}
+[index]:  {4}
+[index]:  {3}
+[index]:  {2}
+[index]:  {1}
+[index]:  {0}
+*************************
+Testcase # 5
+[index]:  {0, 4}
+[index]:  {2}
+[index]:  {0}
+[index]:  {1}
+[index]:  {0}
+*************************

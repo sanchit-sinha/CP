@@ -1,0 +1,41 @@
+[
+	{
+		"correct_answers":
+		[
+			"abb\nabba\nbabbbbbbbbb\naaa",
+			"abb\nabba\nbabbbbbbbbb\naaa\naaba\nb",
+			"abb\nabba\nbabbbbbbbbb\naaa\naaba",
+			"abb\nabba\nbabbbbbbbbb"
+		],
+		"test": "6\n2 4 3\na*\n4 1 3\na**a\n6 3 20\n**a***\n5 5 1\na*a*a\n5 5 2\na*a*a\n2 3 1\n**\n"
+	},
+	{
+		"correct_answers":
+		[
+			"bababb\nbbababb\nbbabbbabbb",
+			"bababb\nbbababb"
+		],
+		"test": "3\n5 3 23\n*a*a*\n5 3 39\n*a*a*\n5 3 48\n*a*a*\n"
+	},
+	{
+		"correct_answers":
+		[
+			"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbaaabbbbbbbbbbbbbbbbbaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbabbbbbbb"
+		],
+		"test": "1\n94 34 899751273\na**a***a***a**aa*a**aaaaaa*aaaaaa**aa*a*a**a**aaa****aaaaa****a**aaaaa*aaa***aaa**aaa**aaa**a*\n"
+	},
+	{
+		"correct_answers":
+		[
+			"abaaaaabbaa"
+		],
+		"test": "1\n13 2 18\na**aaaa*a**aa\t"
+	},
+	{
+		"correct_answers":
+		[
+			"aaababb"
+		],
+		"test": "1\n9 1 6\na*a*a*a**\n"
+	}
+]

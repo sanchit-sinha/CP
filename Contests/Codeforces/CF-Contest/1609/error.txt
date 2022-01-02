@@ -1,0 +1,8 @@
+Testcase # 1
+[aindex]:  {0, 1, 9, 10, 11}
+[bindex]:  {2, 3, 4, 5, 12, 13, 14, 15}
+[cindex]:  {6, 7, 8, 16, 17}
+[num_a_before_this_b]:  5
+[num_c_after_this_b]:  5
+[b_in_betwee]:  8
+*************************

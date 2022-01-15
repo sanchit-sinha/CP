@@ -1,0 +1,23 @@
+[
+	{
+		"correct_answers":
+		[
+			"8"
+		],
+		"test": "aab\n"
+	},
+	{
+		"correct_answers":
+		[
+			"3"
+		],
+		"test": "aaa\n"
+	},
+	{
+		"correct_answers":
+		[
+			"149621752"
+		],
+		"test": "abcdefghijklmnopqrstuvwxyz\n"
+	}
+]

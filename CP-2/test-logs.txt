@@ -1,0 +1,27 @@
+number of test files detected to be        1
+-----------------
+Input:
+3
+2
+1 2
+4
+1 2 3 3
+6
+1 1 2 2 3 3
+
+[0;31mSAMPLE 1 FAILED[0m
+obtained output:
+[0;34m1 2 
+1 2 3 3 
+1 1 2 2 3 3 
+1 2 
+1 2 3 3 
+1 1 2 2 3 3 
+[0m
+Expected output:
+[0;36mYES
+RL
+LRLR
+RLLRRL
+[0m
+-----------------

@@ -1,0 +1,68 @@
+<snippet>
+	<content><![CDATA[
+// reset range to 0/1, {sum, index} query
+const ll N = 2e5 + 11;
+pll TREE[8 * N];
+ll lazy[N * 8], a[N]; // lazy : 0 1 2
+
+pll pull(pll l, pll r) {
+	ll x = (l.f + r.f), y = -1; //operation
+	if (l.f < r.f) y = l.s;
+	else y = r.s;
+
+	return make_pair(x, y);
+}
+
+void push(ll v, ll tl, ll tr) {
+	if (lazy[v] > -1) {
+		lazy[2 * v] = lazy[v];
+		lazy[2 * v + 1] = lazy[v];
+		TREE[v].f = (tr - tl + 1) * (lazy[v]);
+		lazy[v] = -1;
+	}
+}
+
+void build(ll node, ll l, ll r) {
+	if (l == r) TREE[node] = {a[l], l};
+	else {
+		ll mid = l + (r - l) / 2;
+		build(2 * node, l, mid);
+		build(2 * node + 1, mid + 1, r);
+
+		TREE[node] = pull(TREE[node * 2], TREE[node * 2 + 1]);
+	}
+}
+
+void update(ll v, ll tl, ll tr, ll l, ll r, ll addend) {
+	push(v, tl, tr);
+	if (l > r) return;
+	if (l == tl && tr == r) {
+		lazy[v] = addend;
+		push(v, tl, tr);
+	} else {
+		ll tm = tl + (tr - tl) / 2;
+		update(v * 2, tl, tm, l, min(r, tm), addend);
+		update(v * 2 + 1, tm + 1, tr, max(l, tm + 1), r, addend);
+		TREE[v] = pull(TREE[v * 2], TREE[v * 2 + 1]);
+	}
+}
+
+pll query(ll v, ll tl, ll tr, ll l, ll r) {
+	push(v, tl, tr);
+	if (l > r) return {0ll, -1}; //operation (inf , -inf , 0 ...)
+	if (l <= tl && tr <= r) return TREE[v];
+
+	ll tm = tl + (tr - tl) / 2;
+	pll p1 = query(v * 2, tl, tm, l, min(r, tm));
+	pll p2 = query(v * 2 + 1, tm + 1, tr, max(l, tm + 1), r);
+
+	return pull(p1, p2);
+}
+//build(1,0,n-1) .... query(1,0,n-1,l,r) .... update(1,0,n-1,l,r,add)
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>lazy(reset_range)</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

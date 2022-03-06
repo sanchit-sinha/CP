@@ -1,16 +1,10 @@
 <snippet>
 	<content><![CDATA[
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-using namespace __gnu_pbds;
-// above one shoud be above using namespace std
+#define opll tree<pll, null_type,less<pll>, rb_tree_tag,tree_order_statistics_node_update>
+#define oll tree<ll, null_type,less<ll>, rb_tree_tag,tree_order_statistics_node_update>
 
-template<typename T>
-#define o_set(T) tree<T, null_type,less<T>, rb_tree_tag,tree_order_statistics_node_update>
-// o_set(ll) name ; -- defining ordered set
-//member functions :
-//1. order_of_key(k) : number of elements strictly lesser than k
-//2. find_by_order(k) : counting from zero it returns the k-th largest or smallest element in the set - returns iterator
+/*  order_of_key(k) : number of elements strictly lesser than k
+    find_by_order(k) : counting from zero it returns the k-th largest or smallest element in the set - returns iterator  */
 
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

@@ -1,7 +1,11 @@
 <snippet>
 	<content><![CDATA[
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
 #include "bits/stdc++.h"
+using namespace __gnu_pbds;
 using namespace std;
+
 #define f                   first
 #define s                   second
 #define pb                  push_back
@@ -17,8 +21,8 @@ using namespace std;
 #define vpll                vector<pll>
 #define all(c)              (c).begin(),(c).end()
 #define sz(c)               (ll)((c).size())
-#define get(x,c)            get<x>(c)
-#define trav(a,x)           for(auto a = x.begin(); a != x.end(); a++)
+#define getT(x,c)           get<x>(c)
+#define trav(a,x)           for(auto a = (x).begin(); a != (x).end(); a++)
 #define rep(i, n)           for(ll i = 0; i < (n) ; i++)
 #define FOR(i, a, b)        for(ll i = (a); i <= (b); i++)
 #define FORR(i, b, a)       for(ll i = (b); i >= (a); i--)
